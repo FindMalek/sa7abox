@@ -1,15 +1,31 @@
 {
-    "metadata": {
-      "title": "Sa7a Box — Repas Riches en Protéines Premium pour Athlètes & Entrepreneurs",
-      "description": "Repas riches en protéines premium conçus pour les athlètes et les entrepreneurs. Retrait en salle de sport et livraison rapide en Tunisie. Alimentez votre corps avec Sa7a Box.",
-      "ogTitle": "Sa7a Box — Repas Riches en Protéines Premium",
-      "ogDescription": "Alimentez votre dynamisme avec des repas riches en protéines premium. Retrait en salle de sport et livraison rapide en Tunisie.",
-      "twitterTitle": "Sa7a Box — Alimentez Votre Dynamisme",
-      "twitterDescription": "Repas riches en protéines premium pour athlètes. Retrait en salle de sport et livraison rapide en Tunisie."
-    },
-    "brand": {
-      "name": "Sa7a Box",
-      "tagline": "Alimentez Votre Dynamisme",
-      "description": "Repas riches en protéines premium conçus pour la performance."
+  "metadata": {
+    "title": "Sa7a Box — Repas Riches en Protéines Premium pour Athlètes & Entrepreneurs",
+    "description": "Repas riches en protéines premium conçus pour les athlètes et les entrepreneurs. Retrait en salle de sport et livraison rapide en Tunisie. Alimentez votre corps avec Sa7a Box.",
+    "ogTitle": "Sa7a Box — Repas Riches en Protéines Premium",
+    "ogDescription": "Alimentez votre dynamisme avec des repas riches en protéines premium. Retrait en salle de sport et livraison rapide en Tunisie.",
+    "twitterTitle": "Sa7a Box — Alimentez Votre Dynamisme",
+    "twitterDescription": "Repas riches en protéines premium pour athlètes. Retrait en salle de sport et livraison rapide en Tunisie."
+  },
+  "brand": {
+    "name": "Sa7a Box",
+    "tagline": "Alimentez Votre Dynamisme",
+    "description": "Repas riches en protéines premium conçus pour la performance."
+  },
+  "header": {
+    "order": "Commander"
+  },
+  "hero": {
+    "category": "NUTRITION PREMIUM",
+    "headlinePart1": "Koul Mlih,",
+    "headlinePart2": "Trena Mlih.",
+    "description": "Repas authentiques riches en protéines pour alimenter votre dynamisme tunisien.",
+    "orderNow": "Commander",
+    "findUs": "Nous Trouver",
+    "features": {
+      "gymPickup": "Retrait Salle",
+      "freshDaily": "Frais Quotidien",
+      "delivery": "Livraison"
     }
   }
+}
