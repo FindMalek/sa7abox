@@ -9,36 +9,27 @@ export function generateCartItemId(
   return `${menuItemId}_${btoa(optionsStr).replace(/[^a-zA-Z0-9]/g, "")}`;
 }
 
-export function calculateItemPrice(
-  menuItem: MenuItem,
-  options: SelectedOptions
-): number {
-  if (!menuItem.priceTnd) return 0;
+export function calculateItemPrice(menuItem: MenuItem, options: SelectedOptions): number {
+    const basePrice = menuItem.priceTnd || 0;
+    
+    // Sum up all selected extras
+    const extrasPrice = options.extras?.reduce((sum, extraId) => {
+      const extra = menuItem.options?.extras?.find(e => e.id === extraId);
+      return sum + (extra?.priceTnd || 0);
+    }, 0) || 0;
   
-  let total = menuItem.priceTnd;
-  
-  if (options.extras && menuItem.options?.extras) {
-    options.extras.forEach((extraId) => {
-      const extra = menuItem.options?.extras?.find((e) => e.id === extraId);
-      if (extra?.priceTnd) {
-        total += extra.priceTnd;
-      }
-    });
+    return basePrice + extrasPrice;
   }
   
-  return total;
-}
-
-export function calculateTotals(items: CartItem[]): CartTotals {
-  const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
-  const subtotalTnd = items.reduce(
-    (sum, item) =>
-      sum + calculateItemPrice(item.menuItem, item.selectedOptions) * item.quantity,
-    0
-  );
-  
-  return { itemCount, subtotalTnd };
-}
+  export function calculateTotals(items: CartItem[]) {
+    return items.reduce((acc, item) => {
+      const pricePerUnit = calculateItemPrice(item.menuItem, item.selectedOptions);
+      return {
+        itemCount: acc.itemCount + item.quantity,
+        subtotalTnd: acc.subtotalTnd + (pricePerUnit * item.quantity)
+      };
+    }, { itemCount: 0, subtotalTnd: 0 });
+  }
 
 export function findCartItem(
   items: CartItem[],

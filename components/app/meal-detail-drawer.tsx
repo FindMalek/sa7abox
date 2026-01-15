@@ -47,6 +47,16 @@ export function MealDetailDrawer({
     setSelectedOptions({});
   };
 
+  const handleExtraToggle = (extraId: string) => {
+    setSelectedOptions((prev) => {
+      const currentExtras = prev.extras || [];
+      const newExtras = currentExtras.includes(extraId)
+        ? currentExtras.filter((id) => id !== extraId)
+        : [...currentExtras, extraId];
+      return { ...prev, extras: newExtras };
+    });
+  };
+
   const itemPrice = item.priceTnd || 0;
   const extrasTotal = selectedOptions.extras?.reduce((sum, id) => {
     const extra = item.options?.extras?.find((e) => e.id === id);
@@ -60,19 +70,12 @@ export function MealDetailDrawer({
       <div className="mx-auto w-full max-w-xl flex flex-col h-full overflow-hidden"> 
         
         <DrawerHeader className="px-6 pt-6 pb-2 shrink-0">
-          <div className="flex items-center justify-between gap-4">
-            <div>
               <DrawerTitle className="text-2xl font-black text-foreground">
                 {t(item.nameKey)}
               </DrawerTitle>
               <DrawerDescription className="text-muted-foreground mt-1 text-balance">
                 {t(item.descriptionKey)}
               </DrawerDescription>
-            </div>
-            <Badge variant="secondary" className="bg-primary/10 text-primary border-none font-bold shrink-0">
-              {t(`menu.categories.${item.category}`)}
-            </Badge>
-          </div>
         </DrawerHeader>
 
         {/* Replaced ScrollArea with a native div + flex-1 + overflow-y-auto */}
@@ -91,9 +94,6 @@ export function MealDetailDrawer({
 
             {/* Nutrition Section */}
             <div className="bg-muted/30 rounded-2xl p-5 border border-border/40">
-              <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-4">
-                Nutrition Facts
-              </h4>
               <div className="grid grid-cols-3 gap-4 text-center">
                 <div className="flex flex-col">
                   <span className="text-xl font-black text-primary leading-none">{item.nutrition.calories}</span>
@@ -112,38 +112,45 @@ export function MealDetailDrawer({
 
             {/* Customization (Extras) */}
             {item.options?.extras && (
-              <div className="space-y-4">
-                <h4 className="text-sm font-black uppercase tracking-tight text-foreground">
-                  {t('menu.customize.extras')}
-                </h4>
-                <div className="grid gap-3">
-                  {item.options.extras.map((extra) => (
-                    <label 
-                      key={extra.id} 
-                      className="flex items-center justify-between p-4 rounded-xl border border-border hover:bg-muted/20 active:scale-[0.98] transition-all cursor-pointer"
-                    >
-                      <div className="flex items-center gap-3">
-                        <Checkbox id={extra.id} />
-                        <span className="font-bold">{extra.label}</span>
+                <div className="space-y-4">
+                  <h4 className="text-sm font-black uppercase tracking-tight text-foreground">
+                    {t('menu.customize.extras')}
+                  </h4>
+                  <div className="grid gap-3">
+                    {item.options.extras.map((extra) => (
+                      <div 
+                        key={extra.id} 
+                        onClick={() => handleExtraToggle(extra.id)} // Add click handler to label
+                        className="flex items-center justify-between p-4 rounded-xl border border-border hover:bg-muted/20 active:scale-[0.98] transition-all cursor-pointer"
+                      >
+                        <div className="flex items-center gap-3">
+                          <Checkbox 
+                            id={extra.id} 
+                            checked={selectedOptions.extras?.includes(extra.id)} // Connect to state
+                            onCheckedChange={() => handleExtraToggle(extra.id)} // Connect to state
+                          />
+                          <span className="font-bold">{extra.label}</span>
+                        </div>
+                        <span className="text-sm font-black text-primary">+{formatTnd(extra.priceTnd || 0)}</span>
                       </div>
-                      <span className="text-sm font-black text-primary">+{formatTnd(extra.priceTnd || 0)}</span>
-                    </label>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
 
-            {/* Notes */}
-            <div className="space-y-3 pb-8">
-              <Label htmlFor="notes" className="text-sm font-black uppercase text-foreground">
-                {t('menu.customize.notes')}
-              </Label>
-              <Textarea
-                id="notes"
-                className="rounded-xl border-border bg-background focus:ring-primary/20 min-h-[100px] resize-none"
-                placeholder={t('menu.customize.notesPlaceholder')}
-              />
-            </div>
+              {/* Notes (Instructions) - Already connected, but verified */}
+              <div className="space-y-3 pb-8">
+                <Label htmlFor="notes" className="text-sm font-black uppercase text-foreground">
+                  {t('menu.customize.notes')}
+                </Label>
+                <Textarea
+                  id="notes"
+                  className="rounded-xl border-border bg-background focus:ring-primary/20 min-h-[100px] resize-none"
+                  placeholder={t('menu.customize.notesPlaceholder')}
+                  value={selectedOptions.notes || ''}
+                  onChange={(e) => setSelectedOptions({ ...selectedOptions, notes: e.target.value })}
+                />
+              </div>
           </div>
         </div>
 
