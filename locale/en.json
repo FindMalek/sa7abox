@@ -28,13 +28,19 @@
       "delivery": "Delivery"
     }
   },
-"menu": {
+  "menu": {
     "title": "Our Fuel Selection",
     "subtitle": "Designed for performance.",
     "categories": {
       "powerBoxes": "Power Boxes",
       "greenFresh": "Green & Fresh",
-      "proteinDesserts": "Protein Desserts"
+      "proteinDesserts": "Protein Desserts",
+      "box": "Box",
+      "salad": "Salad",
+      "side": "Side",
+      "drink": "Drink",
+      "sides": "Sides",
+      "drinks": "Drinks"
     },
     "currency": "TND",
     "tags": {
@@ -64,7 +70,52 @@
       "oatCookies": {
         "name": "Protein Oat Cookies",
         "description": "Healthy oats with whey protein and dark chocolate."
+      },
+      "riceBowl": {
+        "name": "Rice Bowl",
+        "description": "Steamed rice with herbs and spices."
+      },
+      "proteinShake": {
+        "name": "Protein Shake",
+        "description": "Whey protein shake with your choice of flavor."
       }
+    },
+    "nutrition": {
+      "calories": "Cal",
+      "protein": "Protein",
+      "carbs": "Carbs",
+      "fat": "Fat",
+      "fiber": "Fiber"
+    },
+    "customize": {
+      "extras": "Add Extras",
+      "sauce": "Choose Sauce",
+      "notes": "Special Instructions",
+      "notesPlaceholder": "Any special requests?"
+    },
+    "quantity": "Quantity",
+    "total": "Total",
+    "addToCart": "Add to Order",
+    "cart": {
+      "title": "Your Order",
+      "description": "Review and edit your items",
+      "subtotal": "Subtotal",
+      "item": "item",
+      "items": "items",
+      "sauce": "Sauce",
+      "extras": "Extras",
+      "remove": "Remove item",
+      "continueBrowsing": "Continue",
+      "checkout": "Checkout",
+      "review": "Review Order",
+      "empty": {
+        "title": "Your order is empty",
+        "description": "Add items from the menu to get started",
+        "action": "Browse Menu"
+      }
+    },
+    "checkout": {
+      "comingSoon": "Checkout coming soon!"
     }
   }
 }

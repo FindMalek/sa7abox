@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getTranslations } from 'next-intl/server';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { DumbbellIcon, ClockIcon, TruckIcon } from 'lucide-react';
 
-export async function Hero() {
-  const t = await getTranslations('hero');
+export function Hero() {
+  const t = useTranslations('hero');
 
   return (
     <section className="w-full px-4 pt-12 pb-8 sm:px-6 sm:pt-16 lg:px-8 bg-secondary">
