@@ -118,6 +118,50 @@
 			"comingSoon": "Checkout coming soon!"
 		}
 	},
+	"builder": {
+		"title": "Build Your Meal",
+		"subtitle": "Pick ingredients, customize quantities, see your macros instantly.",
+		"categories": {
+		  "base": "Base",
+		  "protein": "Proteins",
+		  "veg": "Vegetables",
+		  "sauce": "Sauces & Extras",
+		  "extra": "Extras"
+		},
+		"summary": {
+		  "title": "Your Plate",
+		  "nutrition": "Nutrition",
+		  "total": "Total"
+		},
+		"customPlate": {
+		  "name": "Custom Plate",
+		  "description": "Your custom-built meal"
+		},
+		"addToOrder": "Add Plate to Order",
+		"empty": {
+		  "title": "Start Building",
+		  "description": "Select ingredients to build your custom plate."
+		},
+		"steps": {
+		  "meal": "Meal",
+		  "macros": "Macros"
+		},
+		"callout": {
+		  "title": "Build Your Meal",
+		  "description": "Customize your nutrition exactly how you want it. Choose your base, adjust macros, and create the perfect meal for your goals.",
+		  "feature1": "Custom Macros",
+		  "feature2": "Real-time Pricing",
+		  "feature3": "Perfect Portions",
+		  "cta": "Start Building"
+		},
+		"selectMeal": "Select Your Base Meal",
+		"size": "Size",
+		"spicyLevel": "Spicy Level",
+		"noOnions": "No Onions",
+		"nutritionSummary": "Nutrition Summary",
+		"total": "Total",
+		"next": "Next"
+	  },
 	"ingredients": {
 		"rice": {
 			"name": "Brown Rice",

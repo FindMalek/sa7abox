@@ -118,6 +118,39 @@
 			"comingSoon": "Checkout coming soon!"
 		}
 	},
+	"builder": {
+		"title": "Build Your Meal",
+		"subtitle": "Customize your nutrition exactly how you want it.",
+		"steps": {
+			"meal": "Meal",
+			"macros": "Macros"
+		},
+		"callout": {
+			"title": "Build Your Meal",
+			"description": "Customize your nutrition exactly how you want it. Choose your base, adjust macros, and create the perfect meal for your goals.",
+			"feature1": "Custom Macros",
+			"feature2": "Real-time Pricing",
+			"feature3": "Perfect Portions",
+			"cta": "Start Building"
+		},
+		"categories": {
+			"base": "Base",
+			"rice": "Rice",
+			"chickenBreast": "Chicken Breast",
+			"crevette": "Crevette",
+			"salad": "Salad",
+			"harissaLight": "Harissa Light",
+			"oliveOil": "Olive Oil"
+		},
+		"selectMeal": "Select Your Base Meal",
+		"size": "Size",
+		"spicyLevel": "Spicy Level",
+		"noOnions": "No Onions",
+		"nutritionSummary": "Nutrition Summary",
+		"total": "Total",
+		"next": "Next",
+		"addToOrder": "Add to Order"
+	},
 	"ingredients": {
 		"rice": {
 			"name": "Brown Rice",
