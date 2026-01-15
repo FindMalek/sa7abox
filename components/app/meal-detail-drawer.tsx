@@ -131,8 +131,8 @@ export function MealDetailDrawer({
 									<div className="grid gap-3">
 										{item.options.extras.map((extra) => (
 											// biome-ignore lint/a11y/noStaticElementInteractions: <explanation>
-// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
-<div
+											// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
+											<div
 												key={extra.id}
 												onClick={() => handleExtraToggle(extra.id)}
 												className="flex cursor-pointer items-center justify-between rounded-xl border border-border p-4 transition-all hover:bg-muted/20 active:scale-[0.98]"
@@ -140,7 +140,9 @@ export function MealDetailDrawer({
 												<div className="flex items-center gap-3">
 													<Checkbox
 														id={extra.id}
-														checked={!!selectedOptions.extras?.includes(extra.id)} 
+														checked={
+															!!selectedOptions.extras?.includes(extra.id)
+														}
 														onCheckedChange={() => handleExtraToggle(extra.id)}
 													/>
 													<span className="font-bold">{extra.label}</span>

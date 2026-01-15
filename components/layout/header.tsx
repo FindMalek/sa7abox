@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { useCart } from "@/hooks/use-cart";
 import { formatTnd } from "@/lib/utils";
 
@@ -16,18 +16,18 @@ export function Header({ onOpenCart }: HeaderProps) {
 	const { totals, isEmpty } = useCart();
 
 	return (
-		<header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+		<header className="sticky top-0 z-50 w-full border-border/40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 			<div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
 				<Link href="/" className="flex items-center gap-2">
-					<div className="h-8 w-8 rounded bg-primary shrink-0" />
-					<span className="text-2xl font-bold text-primary">Sa7a Box</span>
+					<div className="h-8 w-8 shrink-0 rounded bg-primary" />
+					<span className="font-bold text-2xl text-primary">Sa7a Box</span>
 				</Link>
 
 				<div className="flex items-center gap-3 sm:gap-4">
 					<Button
 						size="default"
 						onClick={onOpenCart}
-						className="bg-primary text-primary-foreground hover:bg-primary/90 relative"
+						className="relative bg-primary text-primary-foreground hover:bg-primary/90"
 					>
 						{t("order")}
 						{!isEmpty && (

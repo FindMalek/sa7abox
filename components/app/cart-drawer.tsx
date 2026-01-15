@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { QuantitySelector } from "@/components/shared/quantity-selector";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
 	Drawer,
 	DrawerContent,
@@ -23,7 +24,6 @@ import {
 } from "@/components/ui/empty";
 import { useCart } from "@/hooks/use-cart";
 import { formatTnd } from "@/lib/utils";
-import {Button} from "@/components/ui/button";
 
 interface CartDrawerProps {
 	open: boolean;
@@ -151,6 +151,15 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
 													<div className="rounded-xl border border-border border-dashed bg-white/50 p-2 text-[11px] text-muted-foreground italic">
 														&quot;{item.selectedOptions.notes}&quot;
 													</div>
+												)}
+
+												{item.selectedOptions.builderSummary && (
+													<Badge
+														variant="outline"
+														className="mt-1 h-5 border-primary/30 bg-primary/10 px-2 py-0 font-bold text-[9px] text-primary"
+													>
+														{item.selectedOptions.builderSummary}
+													</Badge>
 												)}
 
 												<div className="flex items-center justify-between border-border/20 border-t pt-2">

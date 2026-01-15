@@ -1,13 +1,13 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { CartItem, CartState } from "@/types/cart";
-import { MenuItem, SelectedOptions } from "@/types/menu";
 import {
-	generateCartItemId,
 	calculateItemPrice,
 	calculateTotals,
 	findCartItem,
+	generateCartItemId,
 } from "@/lib/cart";
+import { CartItem, type CartState } from "@/types/cart";
+import type { MenuItem, SelectedOptions } from "@/types/menu";
 
 interface CartStore extends CartState {
 	addItem: (item: MenuItem, options: SelectedOptions, quantity: number) => void;

@@ -1,13 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
 	Carousel,
 	CarouselContent,
 	CarouselItem,
 } from "@/components/ui/carousel";
+import type { MenuItem } from "@/types/menu";
 import { MealCard } from "./meal-card";
-import { MenuItem } from "@/types/menu";
-import { useTranslations } from "next-intl";
 
 interface MenuSectionProps {
 	titleKey: string;
@@ -24,7 +24,7 @@ export function MenuSection({
 
 	return (
 		<div className="mb-12">
-			<h2 className="text-2xl font-black text-foreground mb-6 px-4">
+			<h2 className="mb-6 px-4 font-black text-2xl text-foreground">
 				{t(titleKey)}
 			</h2>
 
@@ -39,7 +39,7 @@ export function MenuSection({
 					{items.map((item) => (
 						<CarouselItem
 							key={item.id}
-							className="pl-4 basis-[70%] sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+							className="basis-[70%] pl-4 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
 						>
 							<MealCard item={item} onOpenDetail={onItemClick} />
 						</CarouselItem>

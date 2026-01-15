@@ -1,5 +1,5 @@
-import { CartItem, CartTotals } from "@/types/cart";
-import { MenuItem, SelectedOptions } from "@/types/menu";
+import { type CartItem, CartTotals } from "@/types/cart";
+import type { MenuItem, SelectedOptions } from "@/types/menu";
 
 export function generateCartItemId(
 	menuItemId: string,

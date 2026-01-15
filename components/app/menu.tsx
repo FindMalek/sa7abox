@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { MenuSection } from "./menu-section";
-import { MealDetailDrawer } from "./meal-detail-drawer";
-import { MenuItem } from "@/types/menu";
+import { useState } from "react";
 import { MENU_ITEMS } from "@/data/menu-items";
+import type { MenuItem } from "@/types/menu";
+import { MealDetailDrawer } from "./meal-detail-drawer";
+import { MenuSection } from "./menu-section";
 
 export function Menu() {
 	const t = useTranslations("menu");
@@ -24,13 +24,13 @@ export function Menu() {
 
 	return (
 		<>
-			<section id="menu" className="py-16 bg-background pb-24">
+			<section id="menu" className="bg-background py-16 pb-24">
 				<div className="container mx-auto">
-					<div className="text-center mb-12">
-						<h2 className="text-3xl sm:text-4xl font-black text-foreground mb-2">
+					<div className="mb-12 text-center">
+						<h2 className="mb-2 font-black text-3xl text-foreground sm:text-4xl">
 							{t("title")}
 						</h2>
-						<p className="text-muted-foreground font-medium">{t("subtitle")}</p>
+						<p className="font-medium text-muted-foreground">{t("subtitle")}</p>
 					</div>
 
 					{powerBoxes.length > 0 && (

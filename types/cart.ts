@@ -1,9 +1,13 @@
-import { MenuItem, SelectedOptions } from "./menu";
+import type { BuilderConfig } from "./builder";
+import type { MenuItem, SelectedOptions } from "./menu";
 
 export interface CartItem {
 	cartItemId: string;
 	menuItem: MenuItem;
-	selectedOptions: SelectedOptions;
+	selectedOptions: SelectedOptions & {
+		builderConfig?: BuilderConfig;
+		builderSummary?: string;
+	};
 	quantity: number;
 }
 

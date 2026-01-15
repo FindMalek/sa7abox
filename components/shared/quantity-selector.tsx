@@ -45,7 +45,7 @@ export function QuantitySelector({
 				<MinusIcon className="h-4 w-4" />
 			</Button>
 			{/** biome-ignore lint/a11y/useAriaPropsSupportedByRole: <explanation> */}
-<span
+			<span
 				className="w-8 text-center font-semibold"
 				aria-label={`Quantity: ${value}`}
 			>

@@ -40,7 +40,7 @@ export function MealCard({ item, onOpenDetail }: MealCardProps) {
 				{/* Performance Badge */}
 				<div className="absolute top-4 left-4">
 					<Badge className="rounded-full border-none bg-black/60 px-3 py-1.5 font-black text-[10px] text-white shadow-sm backdrop-blur-md">
-						{item.nutrition.calories} kcal • {item.nutrition.protein}g P
+						{item.nutrition.calories} kcal • {item.nutrition.protein}g Protein
 					</Badge>
 				</div>
 			</div>
