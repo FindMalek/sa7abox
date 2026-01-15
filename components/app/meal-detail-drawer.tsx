@@ -4,12 +4,13 @@ import { useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-} from "@/components/ui/sheet";
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerDescription,
+  DrawerFooter,
+} from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -19,6 +20,7 @@ import { QuantitySelector } from "@/components/shared/quantity-selector";
 import { MenuItem, SelectedOptions } from "@/types/menu";
 import { useCart } from "@/hooks/use-cart";
 import { formatTnd } from "@/lib/utils";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface MealDetailDrawerProps {
   item: MenuItem | null;
@@ -41,195 +43,128 @@ export function MealDetailDrawer({
   const handleAddToCart = () => {
     addItem(item, selectedOptions, quantity);
     onOpenChange(false);
-    // Reset state
     setQuantity(1);
     setSelectedOptions({});
   };
 
-  const handleExtraToggle = (extraId: string) => {
-    setSelectedOptions((prev) => {
-      const extras = prev.extras || [];
-      return {
-        ...prev,
-        extras: extras.includes(extraId)
-          ? extras.filter((id) => id !== extraId)
-          : [...extras, extraId],
-      };
-    });
-  };
-
   const itemPrice = item.priceTnd || 0;
-  const extrasTotal =
-    selectedOptions.extras?.reduce((sum, id) => {
-      const extra = item.options?.extras?.find((e) => e.id === id);
-      return sum + (extra?.priceTnd || 0);
-    }, 0) || 0;
+  const extrasTotal = selectedOptions.extras?.reduce((sum, id) => {
+    const extra = item.options?.extras?.find((e) => e.id === id);
+    return sum + (extra?.priceTnd || 0);
+  }, 0) || 0;
   const totalPrice = (itemPrice + extrasTotal) * quantity;
 
   return (
-    <Sheet open={open} onOpenChange={onOpenChange}>
-      <SheetContent className="w-full sm:max-w-lg overflow-y-auto">
-        <SheetHeader>
-          <SheetTitle className="sr-only">{t(item.nameKey)}</SheetTitle>
-          <SheetDescription className="sr-only">
-            {t(item.descriptionKey)}
-          </SheetDescription>
-        </SheetHeader>
-
-        <div className="mt-4 space-y-6">
-          {/* Image */}
-          <div className="relative aspect-square w-full rounded-xl overflow-hidden">
-            <Image
-              src={item.imageUrl}
-              alt={t(item.nameKey)}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          {/* Name & Description */}
-          <div>
-            <h2 className="text-2xl font-bold text-foreground mb-2">
-              {t(item.nameKey)}
-            </h2>
-            <p className="text-muted-foreground">{t(item.descriptionKey)}</p>
-          </div>
-
-          {/* Nutrition Badges */}
-          <div className="flex flex-wrap gap-2">
-            <Badge variant="outline" className="px-3 py-1">
-              {item.nutrition.calories} {t('menu.nutrition.calories')}
-            </Badge>
-            <Badge variant="outline" className="px-3 py-1">
-              {item.nutrition.protein}g {t('menu.nutrition.protein')}
-            </Badge>
-            {item.nutrition.carbs !== undefined && (
-              <Badge variant="outline" className="px-3 py-1">
-                {item.nutrition.carbs}g {t('menu.nutrition.carbs')}
-              </Badge>
-            )}
-            {item.nutrition.fat !== undefined && (
-              <Badge variant="outline" className="px-3 py-1">
-                {item.nutrition.fat}g {t('menu.nutrition.fat')}
-              </Badge>
-            )}
-            <Badge variant="outline" className="px-3 py-1">
-              {item.nutrition.fiber}g {t('menu.nutrition.fiber')}
-            </Badge>
-          </div>
-
-          {/* Extras */}
-          {item.options?.extras && item.options.extras.length > 0 && (
+    <Drawer open={open} onOpenChange={onOpenChange}>
+    <DrawerContent className="max-h-[94vh] h-full flex flex-col">
+      <div className="mx-auto w-full max-w-xl flex flex-col h-full overflow-hidden"> 
+        
+        <DrawerHeader className="px-6 pt-6 pb-2 shrink-0">
+          <div className="flex items-center justify-between gap-4">
             <div>
-              <Label className="text-base font-semibold mb-3 block">
-                {t('menu.customize.extras')}
-              </Label>
-              <div className="space-y-2">
-                {item.options.extras.map((extra) => (
-                  <div
-                    key={extra.id}
-                    className="flex items-center justify-between p-3 rounded-lg border border-border"
-                  >
-                    <div className="flex items-center gap-3">
-                      <Checkbox
-                        id={extra.id}
-                        checked={selectedOptions.extras?.includes(extra.id)}
-                        onCheckedChange={() => handleExtraToggle(extra.id)}
-                      />
-                      <Label htmlFor={extra.id} className="cursor-pointer">
-                        {extra.label}
-                      </Label>
-                    </div>
-                    {extra.priceTnd && (
-                      <span className="text-sm text-muted-foreground">
-                        +{formatTnd(extra.priceTnd)}
-                      </span>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <DrawerTitle className="text-2xl font-black text-foreground">
+                {t(item.nameKey)}
+              </DrawerTitle>
+              <DrawerDescription className="text-muted-foreground mt-1 text-balance">
+                {t(item.descriptionKey)}
+              </DrawerDescription>
             </div>
-          )}
-
-          {/* Sauces */}
-          {item.options?.sauces && item.options.sauces.length > 0 && (
-            <div>
-              <Label className="text-base font-semibold mb-3 block">
-                {t('menu.customize.sauce')}
-              </Label>
-              <div className="space-y-2">
-                {item.options.sauces.map((sauce) => (
-                  <div
-                    key={sauce}
-                    className="flex items-center gap-3 p-3 rounded-lg border border-border"
-                  >
-                    <Checkbox
-                      id={`sauce-${sauce}`}
-                      checked={selectedOptions.sauce === sauce}
-                      onCheckedChange={(checked) => {
-                        setSelectedOptions((prev) => ({
-                          ...prev,
-                          sauce: checked ? sauce : undefined,
-                        }));
-                      }}
-                    />
-                    <Label htmlFor={`sauce-${sauce}`} className="cursor-pointer">
-                      {sauce}
-                    </Label>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Notes */}
-          <div>
-            <Label htmlFor="notes" className="text-base font-semibold mb-3 block">
-              {t('menu.customize.notes')}
-            </Label>
-            <Textarea
-              id="notes"
-              placeholder={t('menu.customize.notesPlaceholder')}
-              value={selectedOptions.notes || ""}
-              onChange={(e) =>
-                setSelectedOptions((prev) => ({ ...prev, notes: e.target.value }))
-              }
-              rows={3}
-            />
+            <Badge variant="secondary" className="bg-primary/10 text-primary border-none font-bold shrink-0">
+              {t(`menu.categories.${item.category}`)}
+            </Badge>
           </div>
+        </DrawerHeader>
 
-          {/* Quantity & Price */}
-          <div className="flex items-center justify-between pt-4 border-t border-border">
-            <div>
-              <Label className="text-sm text-muted-foreground mb-2 block">
-                {t('menu.quantity')}
-              </Label>
-              <QuantitySelector
-                value={quantity}
-                onChange={setQuantity}
+        {/* Replaced ScrollArea with a native div + flex-1 + overflow-y-auto */}
+        <div className="flex-1 overflow-y-auto px-6 overscroll-contain">
+          <div className="space-y-8 py-6">
+            {/* Image */}
+            <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-sm border border-border/50 bg-muted">
+              <Image
+                src={item.imageUrl}
+                alt={t(item.nameKey)}
+                fill
+                className="object-cover"
+                priority
               />
             </div>
-            <div className="text-right">
-              <div className="text-sm text-muted-foreground mb-1">
-                {t('menu.total')}
-              </div>
-              <div className="text-2xl font-bold text-primary">
-                {formatTnd(totalPrice)}
+
+            {/* Nutrition Section */}
+            <div className="bg-muted/30 rounded-2xl p-5 border border-border/40">
+              <h4 className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-4">
+                Nutrition Facts
+              </h4>
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="flex flex-col">
+                  <span className="text-xl font-black text-primary leading-none">{item.nutrition.calories}</span>
+                  <span className="text-[9px] uppercase font-bold text-muted-foreground mt-1">{t('menu.nutrition.calories')}</span>
+                </div>
+                <div className="flex flex-col border-x border-border/50">
+                  <span className="text-xl font-black text-foreground leading-none">{item.nutrition.protein}g</span>
+                  <span className="text-[9px] uppercase font-bold text-muted-foreground mt-1">{t('menu.nutrition.protein')}</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xl font-black text-foreground leading-none">{item.nutrition.fiber}g</span>
+                  <span className="text-[9px] uppercase font-bold text-muted-foreground mt-1">{t('menu.nutrition.fiber')}</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Add to Cart Button */}
-          <Button
-            onClick={handleAddToCart}
-            className="w-full h-12 text-lg font-semibold"
-            size="lg"
+            {/* Customization (Extras) */}
+            {item.options?.extras && (
+              <div className="space-y-4">
+                <h4 className="text-sm font-black uppercase tracking-tight text-foreground">
+                  {t('menu.customize.extras')}
+                </h4>
+                <div className="grid gap-3">
+                  {item.options.extras.map((extra) => (
+                    <label 
+                      key={extra.id} 
+                      className="flex items-center justify-between p-4 rounded-xl border border-border hover:bg-muted/20 active:scale-[0.98] transition-all cursor-pointer"
+                    >
+                      <div className="flex items-center gap-3">
+                        <Checkbox id={extra.id} />
+                        <span className="font-bold">{extra.label}</span>
+                      </div>
+                      <span className="text-sm font-black text-primary">+{formatTnd(extra.priceTnd || 0)}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Notes */}
+            <div className="space-y-3 pb-8">
+              <Label htmlFor="notes" className="text-sm font-black uppercase text-foreground">
+                {t('menu.customize.notes')}
+              </Label>
+              <Textarea
+                id="notes"
+                className="rounded-xl border-border bg-background focus:ring-primary/20 min-h-[100px] resize-none"
+                placeholder={t('menu.customize.notesPlaceholder')}
+              />
+            </div>
+          </div>
+        </div>
+
+        <DrawerFooter className="px-6 py-6 border-t border-border bg-background/95 backdrop-blur-md shrink-0">
+          <div className="flex items-center justify-between mb-4">
+            <QuantitySelector value={quantity} onChange={setQuantity} className="bg-muted/50 rounded-xl p-1" />
+            <div className="text-right">
+              <span className="text-[9px] uppercase font-black text-muted-foreground block tracking-tighter">{t('menu.total')}</span>
+              <span className="text-2xl font-black text-primary leading-none">{formatTnd(totalPrice)}</span>
+            </div>
+          </div>
+          <Button 
+            onClick={handleAddToCart} 
+            size="lg" 
+            className="w-full h-14 rounded-2xl text-lg font-black bg-primary hover:bg-primary/90 shadow-xl shadow-primary/20 active:scale-[0.98] transition-transform"
           >
             {t('menu.addToCart')}
           </Button>
-        </div>
-      </SheetContent>
-    </Sheet>
+        </DrawerFooter>
+      </div>
+    </DrawerContent>
+  </Drawer>
   );
 }
