@@ -118,28 +118,30 @@
 			"comingSoon": "Checkout coming soon!"
 		}
 	},
-	"builder": {
-		"title": "Build Your Meal",
-		"subtitle": "Customize your nutrition exactly how you want it.",
-		"steps": {
-			"meal": "Meal",
-			"macros": "Macros"
+	"ingredients": {
+		"rice": {
+			"name": "Brown Rice",
+			"description": "Steamed brown rice container"
 		},
-		"callout": {
-			"title": "Build Your Meal",
-			"description": "Customize your nutrition exactly how you want it. Choose your base, adjust macros, and create the perfect meal for your goals.",
-			"feature1": "Custom Macros",
-			"feature2": "Real-time Pricing",
-			"feature3": "Perfect Portions",
-			"cta": "Start Building"
+		"chickenBreast": {
+			"name": "Chicken Breast",
+			"description": "Grilled lean chicken breast"
 		},
-		"selectMeal": "Select Your Base Meal",
-		"size": "Size",
-		"spicyLevel": "Spicy Level",
-		"noOnions": "No Onions",
-		"nutritionSummary": "Nutrition Summary",
-		"total": "Total",
-		"next": "Next",
-		"addToOrder": "Add to Order"
+		"crevette": {
+			"name": "Crevette",
+			"description": "Fresh grilled shrimp"
+		},
+		"salad": {
+			"name": "Mixed Salad",
+			"description": "Fresh mixed greens"
+		},
+		"harissaLight": {
+			"name": "Harissa Light",
+			"description": "Mild spicy harissa sauce"
+		},
+		"oliveOil": {
+			"name": "Olive Oil",
+			"description": "Extra virgin olive oil"
+		}
 	}
 }

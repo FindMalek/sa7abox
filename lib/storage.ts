@@ -1,4 +1,4 @@
-import type { BuilderDraft } from "@/types/builder";
+import type { IngredientBuilderDraft } from "@/types/ingredient-builder";
 
 const CART_STORAGE_KEY = "sa7abox_cart";
 
@@ -31,9 +31,9 @@ export function clearCartStorage(): void {
 	}
 }
 
-const BUILDER_STORAGE_KEY = "sa7abox_builder_draft";
+const BUILDER_STORAGE_KEY = "sa7abox_ingredient_builder_draft";
 
-export function saveBuilderDraft(draft: BuilderDraft): void {
+export function saveBuilderDraft(draft: IngredientBuilderDraft): void {
 	try {
 		if (typeof window === "undefined") return;
 		localStorage.setItem(BUILDER_STORAGE_KEY, JSON.stringify(draft));
@@ -42,21 +42,18 @@ export function saveBuilderDraft(draft: BuilderDraft): void {
 	}
 }
 
-export function loadBuilderDraft(): BuilderDraft | null {
+export function loadBuilderDraft(): IngredientBuilderDraft | null {
 	try {
 		if (typeof window === "undefined") return null;
 		const stored = localStorage.getItem(BUILDER_STORAGE_KEY);
 		if (!stored) return null;
 		const parsed = JSON.parse(stored);
-		// Validate structure
 		if (
-			parsed.mealId &&
-			parsed.size &&
-			parsed.toggles &&
-			parsed.portions &&
+			parsed.selections &&
+			Array.isArray(parsed.selections) &&
 			parsed.timestamp
 		) {
-			return parsed as BuilderDraft;
+			return parsed as IngredientBuilderDraft;
 		}
 		return null;
 	} catch (error) {

@@ -1,12 +1,12 @@
-import type { BuilderConfig } from "./builder";
+import type { IngredientSelection } from "./ingredient-builder";
 import type { MenuItem, SelectedOptions } from "./menu";
 
 export interface CartItem {
 	cartItemId: string;
 	menuItem: MenuItem;
 	selectedOptions: SelectedOptions & {
-		builderConfig?: BuilderConfig;
-		builderSummary?: string;
+		ingredientSelections?: IngredientSelection[];
+		ingredientSummary?: string;
 	};
 	quantity: number;
 }

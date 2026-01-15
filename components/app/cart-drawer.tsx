@@ -153,12 +153,12 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
 													</div>
 												)}
 
-												{item.selectedOptions.builderSummary && (
+												{item.selectedOptions.ingredientSummary && (
 													<Badge
 														variant="outline"
 														className="mt-1 h-5 border-primary/30 bg-primary/10 px-2 py-0 font-bold text-[9px] text-primary"
 													>
-														{item.selectedOptions.builderSummary}
+														{item.selectedOptions.ingredientSummary}
 													</Badge>
 												)}
 

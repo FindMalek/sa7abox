@@ -14,13 +14,13 @@ export function formatCurrency(amount: number, currency = "TND"): string {
 }
 
 /**
- * Creates a stable hash from an object for use as cartItemId
+ * Creates a stable hash from a string or object for use as cartItemId
  */
 export function hashObject(obj: unknown): string {
-	const str = JSON.stringify(
-		obj,
-		Object.keys(obj as Record<string, unknown>).sort(),
-	);
+	const str =
+		typeof obj === "string"
+			? obj
+			: JSON.stringify(obj, Object.keys(obj as Record<string, unknown>).sort());
 	let hash = 0;
 	for (let i = 0; i < str.length; i++) {
 		const char = str.charCodeAt(i);
