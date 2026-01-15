@@ -1,70 +1,70 @@
 {
-  "metadata": {
-    "title": "Sa7a Box — Repas Riches en Protéines Premium pour Athlètes & Entrepreneurs",
-    "description": "Repas riches en protéines premium conçus pour les athlètes et les entrepreneurs. Retrait en salle de sport et livraison rapide en Tunisie. Alimentez votre corps avec Sa7a Box.",
-    "ogTitle": "Sa7a Box — Repas Riches en Protéines Premium",
-    "ogDescription": "Alimentez votre dynamisme avec des repas riches en protéines premium. Retrait en salle de sport et livraison rapide en Tunisie.",
-    "twitterTitle": "Sa7a Box — Alimentez Votre Dynamisme",
-    "twitterDescription": "Repas riches en protéines premium pour athlètes. Retrait en salle de sport et livraison rapide en Tunisie."
-  },
-  "brand": {
-    "name": "Sa7a Box",
-    "tagline": "Alimentez Votre Dynamisme",
-    "description": "Repas riches en protéines premium conçus pour la performance."
-  },
-  "header": {
-    "order": "Commander"
-  },
-  "hero": {
-    "category": "NUTRITION PREMIUM",
-    "headlinePart1": "Koul Mlih,",
-    "headlinePart2": "Trena Mlih.",
-    "description": "Repas authentiques riches en protéines pour alimenter votre dynamisme tunisien.",
-    "orderNow": "Commander",
-    "findUs": "Nous Trouver",
-    "features": {
-      "gymPickup": "Retrait Salle",
-      "freshDaily": "Frais Quotidien",
-      "delivery": "Livraison"
-    }
-  },
-  "menu": {
-    "title": "Notre Sélection",
-    "subtitle": "Conçue pour la performance.",
-    "categories": {
-      "powerBoxes": "Power Boxes",
-      "greenFresh": "Vert & Frais",
-      "proteinDesserts": "Desserts Protéinés"
-    },
-    "currency": "TND",
-    "tags": {
-      "highProtein": "Haute Protéine",
-      "bulking": "Prise de Masse",
-      "fresh": "Frais",
-      "traditional": "Traditionnel",
-      "lowCarb": "Faible Glucides"
-    },
-    "items": {
-      "supercut": {
-        "name": "Supercut",
-        "description": "Blanc de poulet maigre, quinoa, légumes vapeur."
-      },
-      "superman": {
-        "name": "Superman",
-        "description": "Steak grillé, purée de patate douce, haricots verts."
-      },
-      "carthageCaesar": {
-        "name": "César de Carthage",
-        "description": "Laitue romaine fraîche, poulet grillé, pois chiches, sauce césar."
-      },
-      "tunisianTuna": {
-        "name": "Thon Tunisien",
-        "description": "Thon, olives, tomates, concombres, huile d'olive saine."
-      },
-      "oatCookies": {
-        "name": "Cookies Protéinés à l'Avoine",
-        "description": "Avoine saine avec protéine de lactosérum et chocolat noir."
-      }
-    }
-  }
+	"metadata": {
+		"title": "Sa7a Box — Repas Riches en Protéines Premium pour Athlètes & Entrepreneurs",
+		"description": "Repas riches en protéines premium conçus pour les athlètes et les entrepreneurs. Retrait en salle de sport et livraison rapide en Tunisie. Alimentez votre corps avec Sa7a Box.",
+		"ogTitle": "Sa7a Box — Repas Riches en Protéines Premium",
+		"ogDescription": "Alimentez votre dynamisme avec des repas riches en protéines premium. Retrait en salle de sport et livraison rapide en Tunisie.",
+		"twitterTitle": "Sa7a Box — Alimentez Votre Dynamisme",
+		"twitterDescription": "Repas riches en protéines premium pour athlètes. Retrait en salle de sport et livraison rapide en Tunisie."
+	},
+	"brand": {
+		"name": "Sa7a Box",
+		"tagline": "Alimentez Votre Dynamisme",
+		"description": "Repas riches en protéines premium conçus pour la performance."
+	},
+	"header": {
+		"order": "Commander"
+	},
+	"hero": {
+		"category": "NUTRITION PREMIUM",
+		"headlinePart1": "Koul Mlih,",
+		"headlinePart2": "Trena Mlih.",
+		"description": "Repas authentiques riches en protéines pour alimenter votre dynamisme tunisien.",
+		"orderNow": "Commander",
+		"findUs": "Nous Trouver",
+		"features": {
+			"gymPickup": "Retrait Salle",
+			"freshDaily": "Frais Quotidien",
+			"delivery": "Livraison"
+		}
+	},
+	"menu": {
+		"title": "Notre Sélection",
+		"subtitle": "Conçue pour la performance.",
+		"categories": {
+			"powerBoxes": "Power Boxes",
+			"greenFresh": "Vert & Frais",
+			"proteinDesserts": "Desserts Protéinés"
+		},
+		"currency": "TND",
+		"tags": {
+			"highProtein": "Haute Protéine",
+			"bulking": "Prise de Masse",
+			"fresh": "Frais",
+			"traditional": "Traditionnel",
+			"lowCarb": "Faible Glucides"
+		},
+		"items": {
+			"supercut": {
+				"name": "Supercut",
+				"description": "Blanc de poulet maigre, quinoa, légumes vapeur."
+			},
+			"superman": {
+				"name": "Superman",
+				"description": "Steak grillé, purée de patate douce, haricots verts."
+			},
+			"carthageCaesar": {
+				"name": "César de Carthage",
+				"description": "Laitue romaine fraîche, poulet grillé, pois chiches, sauce césar."
+			},
+			"tunisianTuna": {
+				"name": "Thon Tunisien",
+				"description": "Thon, olives, tomates, concombres, huile d'olive saine."
+			},
+			"oatCookies": {
+				"name": "Cookies Protéinés à l'Avoine",
+				"description": "Avoine saine avec protéine de lactosérum et chocolat noir."
+			}
+		}
+	}
 }

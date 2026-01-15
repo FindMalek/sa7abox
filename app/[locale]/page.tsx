@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from "react";
 import { Header } from "@/components/layout/header";
@@ -8,15 +8,15 @@ import { CartDrawer } from "@/components/app/cart-drawer";
 import { CartBottomBar } from "@/components/app/cart-bottom-bar";
 
 export default function Page() {
-  const [cartOpen, setCartOpen] = useState(false);
+	const [cartOpen, setCartOpen] = useState(false);
 
-  return (
-    <main className="min-h-screen">
-      <Header onOpenCart={() => setCartOpen(true)} />
-      <Hero />
-      <Menu />
-      <CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
-      <CartBottomBar onOpenCart={() => setCartOpen(true)} />
-    </main>
-  );
+	return (
+		<main className="min-h-screen">
+			<Header onOpenCart={() => setCartOpen(true)} />
+			<Hero />
+			<Menu />
+			<CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
+			<CartBottomBar onOpenCart={() => setCartOpen(true)} />
+		</main>
+	);
 }

@@ -1,121 +1,121 @@
 {
-  "metadata": {
-    "title": "Sa7a Box — Premium High-Protein Meals for Athletes & Hustlers",
-    "description": "Premium high-protein meals designed for athletes and hustlers. Gym pickup and fast delivery across Tunisia. Fuel your body with Sa7a Box.",
-    "ogTitle": "Sa7a Box — Premium High-Protein Meals",
-    "ogDescription": "Fuel your hustle with premium high-protein meals. Gym pickup & fast delivery across Tunisia.",
-    "twitterTitle": "Sa7a Box — Fuel Your Hustle",
-    "twitterDescription": "Premium high-protein meals for athletes. Gym pickup & fast delivery across Tunisia."
-  },
-  "brand": {
-    "name": "Sa7a Box",
-    "tagline": "Fuel Your Hustle",
-    "description": "Premium high-protein meals designed for performance."
-  },
-  "header": {
-    "order": "Order"
-  },
-  "hero": {
-    "category": "PREMIUM NUTRITION",
-    "headlinePart1": "Koul Mlih,",
-    "headlinePart2": "Trena Mlih.",
-    "description": "Authentic, high-protein meals to fuel your Tunisian hustle.",
-    "orderNow": "Order Now",
-    "findUs": "Find Us",
-    "features": {
-      "gymPickup": "Gym Pickup",
-      "freshDaily": "Fresh Daily",
-      "delivery": "Delivery"
-    }
-  },
-  "menu": {
-    "title": "Our Fuel Selection",
-    "subtitle": "Designed for performance.",
-    "categories": {
-      "powerBoxes": "Power Boxes",
-      "greenFresh": "Green & Fresh",
-      "proteinDesserts": "Protein Desserts",
-      "box": "Box",
-      "salad": "Salad",
-      "side": "Side",
-      "drink": "Drink",
-      "sides": "Sides",
-      "drinks": "Drinks"
-    },
-    "currency": "TND",
-    "tags": {
-      "highProtein": "High Protein",
-      "bulking": "Bulking",
-      "fresh": "Fresh",
-      "traditional": "Traditional",
-      "lowCarb": "Low Carb"
-    },
-    "items": {
-      "supercut": {
-        "name": "Supercut",
-        "description": "Lean chicken breast, quinoa, steamed veggies."
-      },
-      "superman": {
-        "name": "Superman",
-        "description": "Grilled steak, sweet potato mash, green beans."
-      },
-      "carthageCaesar": {
-        "name": "Carthage Caesar",
-        "description": "Fresh romaine, grilled chicken, chickpeas, caesar dressing."
-      },
-      "tunisianTuna": {
-        "name": "Tunisian Tuna",
-        "description": "Tuna, olives, tomatoes, cucumbers, healthy olive oil."
-      },
-      "oatCookies": {
-        "name": "Protein Oat Cookies",
-        "description": "Healthy oats with whey protein and dark chocolate."
-      },
-      "riceBowl": {
-        "name": "Rice Bowl",
-        "description": "Steamed rice with herbs and spices."
-      },
-      "proteinShake": {
-        "name": "Protein Shake",
-        "description": "Whey protein shake with your choice of flavor."
-      }
-    },
-    "nutrition": {
-      "calories": "Cal",
-      "protein": "Protein",
-      "carbs": "Carbs",
-      "fat": "Fat",
-      "fiber": "Fiber"
-    },
-    "customize": {
-      "extras": "Add Extras",
-      "sauce": "Choose Sauce",
-      "notes": "Special Instructions",
-      "notesPlaceholder": "Any special requests?"
-    },
-    "quantity": "Quantity",
-    "total": "Total",
-    "addToCart": "Add to Order",
-    "cart": {
-      "title": "Your Order",
-      "description": "Review and edit your items",
-      "subtotal": "Subtotal",
-      "item": "item",
-      "items": "items",
-      "sauce": "Sauce",
-      "extras": "Extras",
-      "remove": "Remove item",
-      "continueBrowsing": "Continue",
-      "checkout": "Checkout",
-      "review": "Review Order",
-      "empty": {
-        "title": "Your order is empty",
-        "description": "Add items from the menu to get started",
-        "action": "Browse Menu"
-      }
-    },
-    "checkout": {
-      "comingSoon": "Checkout coming soon!"
-    }
-  }
+	"metadata": {
+		"title": "Sa7a Box — Premium High-Protein Meals for Athletes & Hustlers",
+		"description": "Premium high-protein meals designed for athletes and hustlers. Gym pickup and fast delivery across Tunisia. Fuel your body with Sa7a Box.",
+		"ogTitle": "Sa7a Box — Premium High-Protein Meals",
+		"ogDescription": "Fuel your hustle with premium high-protein meals. Gym pickup & fast delivery across Tunisia.",
+		"twitterTitle": "Sa7a Box — Fuel Your Hustle",
+		"twitterDescription": "Premium high-protein meals for athletes. Gym pickup & fast delivery across Tunisia."
+	},
+	"brand": {
+		"name": "Sa7a Box",
+		"tagline": "Fuel Your Hustle",
+		"description": "Premium high-protein meals designed for performance."
+	},
+	"header": {
+		"order": "Order"
+	},
+	"hero": {
+		"category": "PREMIUM NUTRITION",
+		"headlinePart1": "Koul Mlih,",
+		"headlinePart2": "Trena Mlih.",
+		"description": "Authentic, high-protein meals to fuel your Tunisian hustle.",
+		"orderNow": "Order Now",
+		"findUs": "Find Us",
+		"features": {
+			"gymPickup": "Gym Pickup",
+			"freshDaily": "Fresh Daily",
+			"delivery": "Delivery"
+		}
+	},
+	"menu": {
+		"title": "Our Fuel Selection",
+		"subtitle": "Designed for performance.",
+		"categories": {
+			"powerBoxes": "Power Boxes",
+			"greenFresh": "Green & Fresh",
+			"proteinDesserts": "Protein Desserts",
+			"box": "Box",
+			"salad": "Salad",
+			"side": "Side",
+			"drink": "Drink",
+			"sides": "Sides",
+			"drinks": "Drinks"
+		},
+		"currency": "TND",
+		"tags": {
+			"highProtein": "High Protein",
+			"bulking": "Bulking",
+			"fresh": "Fresh",
+			"traditional": "Traditional",
+			"lowCarb": "Low Carb"
+		},
+		"items": {
+			"supercut": {
+				"name": "Supercut",
+				"description": "Lean chicken breast, quinoa, steamed veggies."
+			},
+			"superman": {
+				"name": "Superman",
+				"description": "Grilled steak, sweet potato mash, green beans."
+			},
+			"carthageCaesar": {
+				"name": "Carthage Caesar",
+				"description": "Fresh romaine, grilled chicken, chickpeas, caesar dressing."
+			},
+			"tunisianTuna": {
+				"name": "Tunisian Tuna",
+				"description": "Tuna, olives, tomatoes, cucumbers, healthy olive oil."
+			},
+			"oatCookies": {
+				"name": "Protein Oat Cookies",
+				"description": "Healthy oats with whey protein and dark chocolate."
+			},
+			"riceBowl": {
+				"name": "Rice Bowl",
+				"description": "Steamed rice with herbs and spices."
+			},
+			"proteinShake": {
+				"name": "Protein Shake",
+				"description": "Whey protein shake with your choice of flavor."
+			}
+		},
+		"nutrition": {
+			"calories": "Cal",
+			"protein": "Protein",
+			"carbs": "Carbs",
+			"fat": "Fat",
+			"fiber": "Fiber"
+		},
+		"customize": {
+			"extras": "Add Extras",
+			"sauce": "Choose Sauce",
+			"notes": "Special Instructions",
+			"notesPlaceholder": "Any special requests?"
+		},
+		"quantity": "Quantity",
+		"total": "Total",
+		"addToCart": "Add to Order",
+		"cart": {
+			"title": "Your Order",
+			"description": "Review and edit your items",
+			"subtotal": "Subtotal",
+			"item": "item",
+			"items": "items",
+			"sauce": "Sauce",
+			"extras": "Extras",
+			"remove": "Remove item",
+			"continueBrowsing": "Continue",
+			"checkout": "Checkout",
+			"review": "Review Order",
+			"empty": {
+				"title": "Your order is empty",
+				"description": "Add items from the menu to get started",
+				"action": "Browse Menu"
+			}
+		},
+		"checkout": {
+			"comingSoon": "Checkout coming soon!"
+		}
+	}
 }

@@ -12,17 +12,19 @@ const messages: MessagesMap = {
 	fr: frMessages,
 } as const;
 
-export const locales = ['en', 'fr'] as const;
+export const locales = ["en", "fr"] as const;
 export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = 'en';
+export const defaultLocale: Locale = "en";
 
 export default getRequestConfig(async ({ locale }) => {
 	const cookieStore = await cookies();
 	const cookieLocale = cookieStore.get("locale")?.value;
 
-	const finalLocale: Locale = (locales.includes(cookieLocale as Locale)
+	const finalLocale: Locale = locales.includes(cookieLocale as Locale)
 		? (cookieLocale as Locale)
-		: (locales.includes(locale as Locale) ? (locale as Locale) : defaultLocale));
+		: locales.includes(locale as Locale)
+			? (locale as Locale)
+			: defaultLocale;
 
 	return {
 		locale: finalLocale,
