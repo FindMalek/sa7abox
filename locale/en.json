@@ -27,5 +27,44 @@
       "freshDaily": "Fresh Daily",
       "delivery": "Delivery"
     }
+  },
+"menu": {
+    "title": "Our Fuel Selection",
+    "subtitle": "Designed for performance.",
+    "categories": {
+      "powerBoxes": "Power Boxes",
+      "greenFresh": "Green & Fresh",
+      "proteinDesserts": "Protein Desserts"
+    },
+    "currency": "TND",
+    "tags": {
+      "highProtein": "High Protein",
+      "bulking": "Bulking",
+      "fresh": "Fresh",
+      "traditional": "Traditional",
+      "lowCarb": "Low Carb"
+    },
+    "items": {
+      "supercut": {
+        "name": "Supercut",
+        "description": "Lean chicken breast, quinoa, steamed veggies."
+      },
+      "superman": {
+        "name": "Superman",
+        "description": "Grilled steak, sweet potato mash, green beans."
+      },
+      "carthageCaesar": {
+        "name": "Carthage Caesar",
+        "description": "Fresh romaine, grilled chicken, chickpeas, caesar dressing."
+      },
+      "tunisianTuna": {
+        "name": "Tunisian Tuna",
+        "description": "Tuna, olives, tomatoes, cucumbers, healthy olive oil."
+      },
+      "oatCookies": {
+        "name": "Protein Oat Cookies",
+        "description": "Healthy oats with whey protein and dark chocolate."
+      }
+    }
   }
 }

@@ -27,5 +27,44 @@
       "freshDaily": "Frais Quotidien",
       "delivery": "Livraison"
     }
+  },
+  "menu": {
+    "title": "Notre Sélection",
+    "subtitle": "Conçue pour la performance.",
+    "categories": {
+      "powerBoxes": "Power Boxes",
+      "greenFresh": "Vert & Frais",
+      "proteinDesserts": "Desserts Protéinés"
+    },
+    "currency": "TND",
+    "tags": {
+      "highProtein": "Haute Protéine",
+      "bulking": "Prise de Masse",
+      "fresh": "Frais",
+      "traditional": "Traditionnel",
+      "lowCarb": "Faible Glucides"
+    },
+    "items": {
+      "supercut": {
+        "name": "Supercut",
+        "description": "Blanc de poulet maigre, quinoa, légumes vapeur."
+      },
+      "superman": {
+        "name": "Superman",
+        "description": "Steak grillé, purée de patate douce, haricots verts."
+      },
+      "carthageCaesar": {
+        "name": "César de Carthage",
+        "description": "Laitue romaine fraîche, poulet grillé, pois chiches, sauce césar."
+      },
+      "tunisianTuna": {
+        "name": "Thon Tunisien",
+        "description": "Thon, olives, tomates, concombres, huile d'olive saine."
+      },
+      "oatCookies": {
+        "name": "Cookies Protéinés à l'Avoine",
+        "description": "Avoine saine avec protéine de lactosérum et chocolat noir."
+      }
+    }
   }
 }
