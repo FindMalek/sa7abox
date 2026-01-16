@@ -122,37 +122,37 @@
 		"title": "Build Your Meal",
 		"subtitle": "Pick ingredients, customize quantities, see your macros instantly.",
 		"categories": {
-		  "base": "Base",
-		  "protein": "Proteins",
-		  "veg": "Vegetables",
-		  "sauce": "Sauces & Extras",
-		  "extra": "Extras"
+			"base": "Base",
+			"protein": "Proteins",
+			"veg": "Vegetables",
+			"sauce": "Sauces & Extras",
+			"extra": "Extras"
 		},
 		"summary": {
-		  "title": "Your Plate",
-		  "nutrition": "Nutrition",
-		  "total": "Total"
+			"title": "Your Plate",
+			"nutrition": "Nutrition",
+			"total": "Total"
 		},
 		"customPlate": {
-		  "name": "Custom Plate",
-		  "description": "Your custom-built meal"
+			"name": "Custom Plate",
+			"description": "Your custom-built meal"
 		},
 		"addToOrder": "Add Plate to Order",
 		"empty": {
-		  "title": "Start Building",
-		  "description": "Select ingredients to build your custom plate."
+			"title": "Start Building",
+			"description": "Select ingredients to build your custom plate."
 		},
 		"steps": {
-		  "meal": "Meal",
-		  "macros": "Macros"
+			"meal": "Meal",
+			"macros": "Macros"
 		},
 		"callout": {
-		  "title": "Build Your Meal",
-		  "description": "Customize your nutrition exactly how you want it. Choose your base, adjust macros, and create the perfect meal for your goals.",
-		  "feature1": "Custom Macros",
-		  "feature2": "Real-time Pricing",
-		  "feature3": "Perfect Portions",
-		  "cta": "Start Building"
+			"title": "Build Your Meal",
+			"description": "Customize your nutrition exactly how you want it. Choose your base, adjust macros, and create the perfect meal for your goals.",
+			"feature1": "Custom Macros",
+			"feature2": "Real-time Pricing",
+			"feature3": "Perfect Portions",
+			"cta": "Start Building"
 		},
 		"selectMeal": "Select Your Base Meal",
 		"size": "Size",
@@ -161,7 +161,7 @@
 		"nutritionSummary": "Nutrition Summary",
 		"total": "Total",
 		"next": "Next"
-	  },
+	},
 	"ingredients": {
 		"rice": {
 			"name": "Brown Rice",
@@ -187,5 +187,25 @@
 			"name": "Olive Oil",
 			"description": "Extra virgin olive oil"
 		}
+	},
+	"checkout": {
+		"title": "Checkout",
+		"name": {
+			"label": "Full Name",
+			"placeholder": "Enter your full name",
+			"description": "We'll use this to contact you"
+		},
+		"phone": {
+			"label": "Phone Number",
+			"placeholder": "+216 XX XXX XXX",
+			"description": "For order confirmation"
+		},
+		"location": {
+			"label": "Location",
+			"placeholder": "Enter your location or pickup address",
+			"description": "Gym pickup location or delivery address"
+		},
+		"submit": "Place Order",
+		"success": "Order submitted! We'll contact you soon."
 	}
 }
