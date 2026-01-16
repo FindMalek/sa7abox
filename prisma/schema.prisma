@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Contact {
+  id             String   @id @default(cuid())
+  telegramChatId String   @unique
+  name           String?
+  username       String?
+  firstName      String?
+  lastName       String?
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([telegramChatId])
+  @@map("contacts")
+}
+
+model Customer {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  location  String?  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  orders    Order[]
+
+  @@unique([phone])
+  @@index([phone])
+  @@map("customers")
+}
+
+model Order {
+  id                String      @id @default(cuid())
+  orderNumber       String      @unique
+  customerId        String
+  customerName      String      // Denormalized for easy access
+  customerPhone     String      // Denormalized for easy access
+  customerLocation  String
+  status            OrderStatus @default(PENDING)
+  total             Decimal     @db.Decimal(10, 2)
+  items             Json        // Store cart items as JSON
+  telegramMessageId Int?        // Store Telegram message ID for updates
+  telegramChatId    String?     // Store chat ID where message was sent
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+
+  customer          Customer    @relation(fields: [customerId], references: [id])
+
+  @@index([orderNumber])
+  @@index([status])
+  @@index([createdAt])
+  @@index([customerId])
+  @@map("orders")
+}
+
+enum OrderStatus {
+  PENDING
+  PREPARING
+  READY
+  SHIPPED
+  DELIVERED
+  CANCELLED
+}
