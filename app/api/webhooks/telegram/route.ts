@@ -4,6 +4,7 @@ import {
 	answerCallbackQuery,
 	registerChatId,
 	sendWelcomeMessage,
+	updateOrderMessage,
 } from "@/lib/telegram";
 
 export async function POST(request: Request) {
@@ -12,16 +13,28 @@ export async function POST(request: Request) {
 
 		// Handle callback queries (button clicks)
 		if (update.callback_query) {
-			const { data, id: callbackQueryId, message } = update.callback_query;
+			const { data, id: callbackQueryId, message: callbackMessage } = update.callback_query;
 
 			if (data?.startsWith("ship_")) {
 				const orderNumber = data.replace("ship_", "");
 
 				// Update order status
-				await db.order.update({
+				const order = await db.order.update({
 					where: { orderNumber },
 					data: { status: "SHIPPED" },
+					include: {
+						customer: true,
+					},
 				});
+
+				// Update Telegram message if we have message info
+				if (callbackMessage?.chat?.id && callbackMessage?.message_id) {
+					await updateOrderMessage(
+						orderNumber,
+						callbackMessage.chat.id.toString(),
+						callbackMessage.message_id,
+					);
+				}
 
 				await answerCallbackQuery(
 					callbackQueryId,
@@ -32,10 +45,22 @@ export async function POST(request: Request) {
 			if (data?.startsWith("preparing_")) {
 				const orderNumber = data.replace("preparing_", "");
 
-				await db.order.update({
+				const order = await db.order.update({
 					where: { orderNumber },
 					data: { status: "PREPARING" },
+					include: {
+						customer: true,
+					},
 				});
+
+				// Update Telegram message
+				if (callbackMessage?.chat?.id && callbackMessage?.message_id) {
+					await updateOrderMessage(
+						orderNumber,
+						callbackMessage.chat.id.toString(),
+						callbackMessage.message_id,
+					);
+				}
 
 				await answerCallbackQuery(
 					callbackQueryId,
@@ -46,15 +71,50 @@ export async function POST(request: Request) {
 			if (data?.startsWith("ready_")) {
 				const orderNumber = data.replace("ready_", "");
 
-				await db.order.update({
+				const order = await db.order.update({
 					where: { orderNumber },
 					data: { status: "READY" },
+					include: {
+						customer: true,
+					},
 				});
+
+				// Update Telegram message
+				if (callbackMessage?.chat?.id && callbackMessage?.message_id) {
+					await updateOrderMessage(
+						orderNumber,
+						callbackMessage.chat.id.toString(),
+						callbackMessage.message_id,
+					);
+				}
 
 				await answerCallbackQuery(
 					callbackQueryId,
 					`📦 Order #${orderNumber} marked as ready!`,
 				);
+			}
+
+			if (data?.startsWith("phone_")) {
+				const orderNumber = data.replace("phone_", "");
+
+				// Get order to find customer phone
+				const order = await db.order.findUnique({
+					where: { orderNumber },
+					include: { customer: true },
+				});
+
+				if (order) {
+					await answerCallbackQuery(
+						callbackQueryId,
+						`📞 Customer Phone: ${order.customer.phone}`,
+						true, // show_alert = true to show in alert popup
+					);
+				} else {
+					await answerCallbackQuery(
+						callbackQueryId,
+						"Order not found",
+					);
+				}
 			}
 
 			return NextResponse.json({ ok: true });

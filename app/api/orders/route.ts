@@ -125,6 +125,7 @@ export async function POST(request: Request) {
 
 		// Format items for Telegram notification
 		const formattedItems = body.items.map((item) => {
+			const isCustomPlate = !!item.selectedOptions.ingredientSelections;
 			let options = "";
 
 			if (item.selectedOptions.ingredientSelections) {
@@ -158,10 +159,16 @@ export async function POST(request: Request) {
 
 			const unitPrice = calculateItemPrice(item);
 			return {
-				name: item.menuItem.nameKey,
+				name: item.menuItem.nameKey, // Keep nameKey for translation
+				nameKey: item.menuItem.nameKey,
 				quantity: item.quantity,
 				price: unitPrice * item.quantity,
-				options: options || undefined,
+				isCustomPlate,
+				ingredientSelections: item.selectedOptions.ingredientSelections,
+				extras: item.selectedOptions.extras,
+				sauce: item.selectedOptions.sauce,
+				removedIngredients: item.selectedOptions.removeIngredients,
+				notes: item.selectedOptions.notes,
 			};
 		});
 

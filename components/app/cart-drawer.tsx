@@ -35,25 +35,67 @@ interface CartDrawerProps {
 
 export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
 	const t = useTranslations();
-	const { items, totals, removeItem, updateQuantity, isEmpty } = useCart();
+	const { items, totals, removeItem, updateQuantity, isEmpty, clearCart } =
+		useCart();
 	const [showCheckout, setShowCheckout] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [error, setError] = useState<string | null>(null);
 
 	const handleCheckout = () => {
 		setShowCheckout(true);
+		setError(null);
 	};
 
 	const handleBackToCart = () => {
 		setShowCheckout(false);
+		setError(null);
 	};
 
-	const handleSubmitOrder = (formData: {
+	const handleSubmitOrder = async (formData: {
 		name: string;
 		phone: string;
 		location: string;
 	}) => {
-		// TODO: Send order to Telegram
-		console.log("Order submitted:", { formData, items, totals });
-		alert(t("checkout.success"));
+		setIsSubmitting(true);
+		setError(null);
+
+		try {
+			const response = await fetch("/api/orders", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					customerName: formData.name,
+					customerPhone: formData.phone,
+					customerLocation: formData.location,
+					items: items,
+					total: totals.subtotalTnd,
+				}),
+			});
+
+			if (!response.ok) {
+				const errorData = await response.json().catch(() => ({}));
+				throw new Error(errorData.error || "Failed to submit order");
+			}
+
+			const result = await response.json();
+			console.log(result);
+
+			// Success! Clear cart and close drawer
+			clearCart();
+			onOpenChange(false);
+			setShowCheckout(false);
+		} catch (err) {
+			console.error("Order submission error:", err);
+			setError(
+				err instanceof Error
+					? err.message
+					: t("checkout.error") || "Failed to submit order. Please try again.",
+			);
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -61,11 +103,21 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
 			<DrawerContent className="max-h-[92vh]">
 				<div className="mx-auto flex h-full w-full max-w-xl flex-col overflow-hidden">
 					{showCheckout ? (
-						<CheckoutForm
-							totals={totals}
-							onBack={handleBackToCart}
-							onSubmit={handleSubmitOrder}
-						/>
+						<>
+							<CheckoutForm
+								totals={totals}
+								onBack={handleBackToCart}
+								onSubmit={handleSubmitOrder}
+								isSubmitting={isSubmitting}
+							/>
+							{error && (
+								<div className="px-6 pb-4">
+									<div className="rounded-xl border border-destructive/50 bg-destructive/10 p-3 text-destructive text-sm">
+										{error}
+									</div>
+								</div>
+							)}
+						</>
 					) : (
 						<>
 							<DrawerHeader className="px-6 pt-6 pb-2">

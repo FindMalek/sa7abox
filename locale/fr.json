@@ -206,6 +206,8 @@
 			"description": "Gym pickup location or delivery address"
 		},
 		"submit": "Place Order",
-		"success": "Order submitted! We'll contact you soon."
+		"submitting": "Submitting...",
+		"success": "Order submitted! We'll contact you soon.",
+		"error": "Failed to submit order. Please try again."
 	}
 }

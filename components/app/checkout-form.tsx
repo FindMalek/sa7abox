@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, Loader2Icon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -23,10 +23,11 @@ import type { CartTotals } from "@/types/cart";
 interface CheckoutFormProps {
 	totals: CartTotals;
 	onBack: () => void;
-	onSubmit: (data: { name: string; phone: string; location: string }) => void;
+	onSubmit: (data: { name: string; phone: string; location: string }) => Promise<void>;
+	isSubmitting?: boolean;
 }
 
-export function CheckoutForm({ totals, onBack, onSubmit }: CheckoutFormProps) {
+export function CheckoutForm({ totals, onBack, onSubmit, isSubmitting = false }: CheckoutFormProps) {
 	const t = useTranslations();
 	const [formData, setFormData] = useState({
 		name: "",
@@ -34,9 +35,9 @@ export function CheckoutForm({ totals, onBack, onSubmit }: CheckoutFormProps) {
 		location: "",
 	});
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
-		onSubmit(formData);
+		await onSubmit(formData);
 	};
 
 	return (
@@ -48,6 +49,7 @@ export function CheckoutForm({ totals, onBack, onSubmit }: CheckoutFormProps) {
 							variant="ghost"
 							size="icon"
 							onClick={onBack}
+							disabled={isSubmitting}
 							className="-ml-2 h-8 w-8"
 						>
 							<ArrowLeftIcon className="h-5 w-5" />
@@ -77,6 +79,7 @@ export function CheckoutForm({ totals, onBack, onSubmit }: CheckoutFormProps) {
 										setFormData({ ...formData, name: e.target.value })
 									}
 									required
+									disabled={isSubmitting}
 								/>
 								<FieldDescription>
 									{t("checkout.name.description")}
@@ -97,6 +100,7 @@ export function CheckoutForm({ totals, onBack, onSubmit }: CheckoutFormProps) {
 										setFormData({ ...formData, phone: e.target.value })
 									}
 									required
+									disabled={isSubmitting}
 								/>
 								<FieldDescription>
 									{t("checkout.phone.description")}
@@ -116,6 +120,7 @@ export function CheckoutForm({ totals, onBack, onSubmit }: CheckoutFormProps) {
 										setFormData({ ...formData, location: e.target.value })
 									}
 									required
+									disabled={isSubmitting}
 								/>
 								<FieldDescription>
 									{t("checkout.location.description")}
@@ -138,9 +143,17 @@ export function CheckoutForm({ totals, onBack, onSubmit }: CheckoutFormProps) {
 					</div>
 					<Button
 						type="submit"
-						className="h-14 w-full rounded-2xl bg-primary font-black text-lg shadow-lg shadow-primary/20"
+						disabled={isSubmitting}
+						className="h-14 w-full rounded-2xl bg-primary font-black text-lg shadow-lg shadow-primary/20 disabled:opacity-50"
 					>
-						{t("checkout.submit")}
+						{isSubmitting ? (
+							<>
+								<Loader2Icon className="mr-2 h-5 w-5 animate-spin" />
+								{t("checkout.submitting") || "Submitting..."}
+							</>
+						) : (
+							t("checkout.submit")
+						)}
 					</Button>
 				</DrawerFooter>
 			</form>
