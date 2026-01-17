@@ -9,26 +9,22 @@ datasource db {
   provider = "postgresql"
 }
 
-model Contact {
+model TelegramSubscriber {
   id             String   @id @default(cuid())
   telegramChatId String   @unique
-  name           String?
-  username       String?
-  firstName      String?
-  lastName       String?
-  isActive       Boolean  @default(true)
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  username        String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
 
   @@index([telegramChatId])
-  @@map("contacts")
+  @@map("telegram_subscribers")
 }
 
 model Customer {
   id        String   @id @default(cuid())
   name      String
   phone     String
-  location  String?  
+  location  String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -43,24 +39,91 @@ model Order {
   id                String      @id @default(cuid())
   orderNumber       String      @unique
   customerId        String
-  customerName      String      // Denormalized for easy access
-  customerPhone     String      // Denormalized for easy access
-  customerLocation  String
   status            OrderStatus @default(PENDING)
   total             Decimal     @db.Decimal(10, 2)
-  items             Json        // Store cart items as JSON
-  telegramMessageId Int?        // Store Telegram message ID for updates
-  telegramChatId    String?     // Store chat ID where message was sent
+  telegramMessageId Int?
+  telegramChatId    String?
   createdAt         DateTime    @default(now())
   updatedAt         DateTime    @updatedAt
 
   customer          Customer    @relation(fields: [customerId], references: [id])
+  items             OrderItem[]
 
   @@index([orderNumber])
   @@index([status])
   @@index([createdAt])
   @@index([customerId])
   @@map("orders")
+}
+
+model OrderItem {
+  id            String   @id @default(cuid())
+  orderId       String
+  menuItemId   String?  // null if custom plate
+  isCustomPlate Boolean  @default(false)
+  name          String   // Display name
+  quantity      Int
+  unitPrice     Decimal  @db.Decimal(10, 2)
+  totalPrice    Decimal  @db.Decimal(10, 2)
+  
+  // Selected options for regular items
+  selectedSauce String?
+  notes         String?
+  
+  // Nutrition snapshot (stored as columns, not JSON)
+  calories      Int?
+  protein       Decimal? @db.Decimal(10, 2)
+  carbs         Decimal? @db.Decimal(10, 2)
+  fat           Decimal? @db.Decimal(10, 2)
+  fiber         Decimal? @db.Decimal(10, 2)
+
+  order                Order                    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  ingredients          OrderItemIngredient[]     // For custom plates
+  extras               OrderItemExtra[]          // For regular items
+  removedIngredients   OrderItemRemovedIngredient[] // For regular items
+
+  @@index([orderId])
+  @@index([menuItemId])
+  @@map("order_items")
+}
+
+model OrderItemIngredient {
+  id            String    @id @default(cuid())
+  orderItemId   String
+  ingredientId  String    // e.g. "rice", "chicken-breast"
+  quantity      Int       // How many units of this ingredient
+
+  orderItem     OrderItem @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+
+  @@index([orderItemId])
+  @@index([ingredientId])
+  @@map("order_item_ingredients")
+}
+
+model OrderItemExtra {
+  id          String    @id @default(cuid())
+  orderItemId String
+  extraId     String    // ID of the extra option
+
+  orderItem   OrderItem @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+
+  @@unique([orderItemId, extraId])
+  @@index([orderItemId])
+  @@index([extraId])
+  @@map("order_item_extras")
+}
+
+model OrderItemRemovedIngredient {
+  id            String    @id @default(cuid())
+  orderItemId   String
+  ingredientId  String    // ID of ingredient to remove
+
+  orderItem     OrderItem @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+
+  @@unique([orderItemId, ingredientId])
+  @@index([orderItemId])
+  @@index([ingredientId])
+  @@map("order_item_removed_ingredients")
 }
 
 enum OrderStatus {
