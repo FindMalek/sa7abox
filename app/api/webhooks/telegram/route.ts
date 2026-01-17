@@ -65,11 +65,7 @@ export async function POST(request: Request) {
 			const chatId = update.message.chat.id.toString();
 			const from = update.message.from;
 
-			await registerChatId(chatId, {
-				username: from?.username,
-				firstName: from?.first_name,
-				lastName: from?.last_name,
-			});
+			await registerChatId(chatId, from?.username);
 
 			await sendWelcomeMessage(chatId);
 

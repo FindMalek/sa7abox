@@ -23,14 +23,13 @@ interface OrderData {
 }
 
 /**
- * Get all active registered chat IDs from database
+ * Get all registered chat IDs from database
  */
 async function getRegisteredChatIds(): Promise<string[]> {
-	const contacts = await db.contact.findMany({
-		where: { isActive: true },
+	const subscribers = await db.telegramSubscriber.findMany({
 		select: { telegramChatId: true },
 	});
-	return contacts.map((c) => c.telegramChatId);
+	return subscribers.map((s) => s.telegramChatId);
 }
 
 /**
@@ -143,26 +142,16 @@ ${itemsText}
  */
 export async function registerChatId(
 	chatId: string,
-	userInfo?: {
-		username?: string;
-		firstName?: string;
-		lastName?: string;
-	},
+	username?: string,
 ): Promise<void> {
-	await db.contact.upsert({
+	await db.telegramSubscriber.upsert({
 		where: { telegramChatId: chatId },
 		update: {
-			username: userInfo?.username,
-			firstName: userInfo?.firstName,
-			lastName: userInfo?.lastName,
-			isActive: true,
+			username: username || null,
 		},
 		create: {
 			telegramChatId: chatId,
-			username: userInfo?.username,
-			firstName: userInfo?.firstName,
-			lastName: userInfo?.lastName,
-			isActive: true,
+			username: username || null,
 		},
 	});
 }
