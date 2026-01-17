@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
-import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Footer } from "@/components/layout/footer";
 import { type Locale, locales } from "@/lib/i18n";
 import "@/styles/globals.css";
 
@@ -145,6 +145,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 			>
 				<NextIntlClientProvider messages={messages} locale={validLocale}>
 					{children}
+					<Footer />
 				</NextIntlClientProvider>
 			</body>
 		</html>

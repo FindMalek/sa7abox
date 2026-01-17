@@ -1,213 +1,222 @@
 {
 	"metadata": {
-		"title": "Sa7a Box — Premium High-Protein Meals for Athletes & Hustlers",
-		"description": "Premium high-protein meals designed for athletes and hustlers. Gym pickup and fast delivery across Tunisia. Fuel your body with Sa7a Box.",
-		"ogTitle": "Sa7a Box — Premium High-Protein Meals",
-		"ogDescription": "Fuel your hustle with premium high-protein meals. Gym pickup & fast delivery across Tunisia.",
-		"twitterTitle": "Sa7a Box — Fuel Your Hustle",
-		"twitterDescription": "Premium high-protein meals for athletes. Gym pickup & fast delivery across Tunisia."
+		"title": "Sa7a Box — Repas Premium Riches en Protéines pour Athlètes et Entrepreneurs",
+		"description": "Repas premium riches en protéines conçus pour les athlètes et les entrepreneurs. Retrait en salle et livraison rapide dans toute la Tunisie. Boostez votre corps avec Sa7a Box.",
+		"ogTitle": "Sa7a Box — Repas Premium Riches en Protéines",
+		"ogDescription": "Boostez votre quotidien avec des repas premium riches en protéines. Retrait en salle et livraison rapide dans toute la Tunisie.",
+		"twitterTitle": "Sa7a Box — Boostez Votre Quotidien",
+		"twitterDescription": "Repas premium riches en protéines pour les athlètes. Retrait en salle et livraison rapide dans toute la Tunisie."
 	},
 	"brand": {
 		"name": "Sa7a Box",
-		"tagline": "Fuel Your Hustle",
-		"description": "Premium high-protein meals designed for performance."
+		"tagline": "Boostez Votre Quotidien",
+		"description": "Repas premium riches en protéines conçus pour la performance."
 	},
 	"header": {
-		"order": "Order"
+		"order": "Commander"
 	},
 	"hero": {
-		"category": "PREMIUM NUTRITION",
+		"category": "NUTRITION PREMIUM",
 		"headlinePart1": "Koul Mlih,",
 		"headlinePart2": "Trena Mlih.",
-		"description": "Authentic, high-protein meals to fuel your Tunisian hustle.",
-		"orderNow": "Order Now",
-		"findUs": "Find Us",
+		"description": "Des repas authentiques et riches en protéines pour booster votre quotidien en Tunisie.",
+		"orderNow": "Commander",
+		"findUs": "Nous trouver",
 		"features": {
-			"gymPickup": "Gym Pickup",
-			"freshDaily": "Fresh Daily",
-			"delivery": "Delivery"
+			"gymPickup": "Retrait en salle",
+			"freshDaily": "Frais chaque jour",
+			"delivery": "Livraison"
 		}
 	},
 	"menu": {
-		"title": "Our Fuel Selection",
-		"subtitle": "Designed for performance.",
+		"title": "Notre Sélection Nutritionnelle",
+		"subtitle": "Conçue pour la performance.",
 		"categories": {
 			"powerBoxes": "Power Boxes",
-			"greenFresh": "Green & Fresh",
-			"proteinDesserts": "Protein Desserts",
+			"greenFresh": "Vert et Frais",
+			"proteinDesserts": "Desserts Protéinés",
 			"box": "Box",
-			"salad": "Salad",
-			"side": "Side",
-			"drink": "Drink",
-			"sides": "Sides",
-			"drinks": "Drinks"
+			"salad": "Salade",
+			"side": "Accompagnement",
+			"drink": "Boisson",
+			"sides": "Accompagnements",
+			"drinks": "Boissons"
 		},
 		"currency": "TND",
 		"tags": {
-			"highProtein": "High Protein",
-			"bulking": "Bulking",
-			"fresh": "Fresh",
-			"traditional": "Traditional",
-			"lowCarb": "Low Carb"
+			"highProtein": "Riche en Protéines",
+			"bulking": "Prise de Masse",
+			"fresh": "Frais",
+			"traditional": "Traditionnel",
+			"lowCarb": "Faible en Glucides"
 		},
 		"items": {
 			"supercut": {
 				"name": "Supercut",
-				"description": "Lean chicken breast, quinoa, steamed veggies."
+				"description": "Blanc de poulet maigre, quinoa, légumes vapeur."
 			},
 			"superman": {
 				"name": "Superman",
-				"description": "Grilled steak, sweet potato mash, green beans."
+				"description": "Steak grillé, purée de patates douces, haricots verts."
 			},
 			"carthageCaesar": {
 				"name": "Carthage Caesar",
-				"description": "Fresh romaine, grilled chicken, chickpeas, caesar dressing."
+				"description": "Laitue romaine fraîche, poulet grillé, pois chiches, sauce césar."
 			},
 			"tunisianTuna": {
-				"name": "Tunisian Tuna",
-				"description": "Tuna, olives, tomatoes, cucumbers, healthy olive oil."
+				"name": "Thon Tunisien",
+				"description": "Thon, olives, tomates, concombres, huile d'olive saine."
 			},
 			"oatCookies": {
-				"name": "Protein Oat Cookies",
-				"description": "Healthy oats with whey protein and dark chocolate."
+				"name": "Cookies d'Avoine Protéinés",
+				"description": "Avoine saine avec whey protéine et chocolat noir."
 			},
 			"riceBowl": {
-				"name": "Rice Bowl",
-				"description": "Steamed rice with herbs and spices."
+				"name": "Bol de Riz",
+				"description": "Riz à la vapeur aux herbes et épices."
 			},
 			"proteinShake": {
-				"name": "Protein Shake",
-				"description": "Whey protein shake with your choice of flavor."
+				"name": "Shake Protéiné",
+				"description": "Shake de whey protéine avec le parfum de votre choix."
 			}
 		},
 		"nutrition": {
 			"calories": "Cal",
-			"protein": "Protein",
-			"carbs": "Carbs",
-			"fat": "Fat",
-			"fiber": "Fiber"
+			"protein": "Protéines",
+			"carbs": "Glucides",
+			"fat": "Lipides",
+			"fiber": "Fibres"
 		},
 		"customize": {
-			"extras": "Add Extras",
-			"sauce": "Choose Sauce",
-			"notes": "Special Instructions",
-			"notesPlaceholder": "Any special requests?"
+			"extras": "Ajouter des Extras",
+			"sauce": "Choisir une Sauce",
+			"notes": "Instructions Spéciales",
+			"notesPlaceholder": "Des demandes particulières ?"
 		},
-		"quantity": "Quantity",
+		"quantity": "Quantité",
 		"total": "Total",
-		"addToCart": "Add to Order",
+		"addToCart": "Ajouter à la commande",
 		"cart": {
-			"title": "Your Order",
-			"description": "Review and edit your items",
-			"subtotal": "Subtotal",
-			"item": "item",
-			"items": "items",
+			"title": "Votre Commande",
+			"description": "Vérifiez et modifiez vos articles",
+			"subtotal": "Sous-total",
+			"item": "article",
+			"items": "articles",
 			"sauce": "Sauce",
 			"extras": "Extras",
-			"remove": "Remove item",
-			"continueBrowsing": "Continue",
-			"checkout": "Checkout",
-			"review": "Review Order",
+			"remove": "Supprimer",
+			"continueBrowsing": "Continuer",
+			"checkout": "Commander",
+			"review": "Vérifier la commande",
 			"empty": {
-				"title": "Your order is empty",
-				"description": "Add items from the menu to get started",
-				"action": "Browse Menu"
+				"title": "Votre commande est vide",
+				"description": "Ajoutez des articles du menu pour commencer",
+				"action": "Parcourir le Menu"
 			}
 		},
 		"checkout": {
-			"comingSoon": "Checkout coming soon!"
+			"comingSoon": "Paiement bientôt disponible !"
 		}
 	},
 	"builder": {
-		"title": "Build Your Meal",
-		"subtitle": "Pick ingredients, customize quantities, see your macros instantly.",
+		"title": "Composez Votre Repas",
+		"subtitle": "Choisissez vos ingrédients, ajustez les quantités et voyez vos macros instantanément.",
 		"categories": {
 			"base": "Base",
-			"protein": "Proteins",
-			"veg": "Vegetables",
+			"protein": "Protéines",
+			"veg": "Légumes",
 			"sauce": "Sauces & Extras",
 			"extra": "Extras"
 		},
 		"summary": {
-			"title": "Your Plate",
+			"title": "Votre Assiette",
 			"nutrition": "Nutrition",
 			"total": "Total"
 		},
 		"customPlate": {
-			"name": "Custom Plate",
-			"description": "Your custom-built meal"
+			"name": "Assiette Personnalisée",
+			"description": "Votre repas sur mesure"
 		},
-		"addToOrder": "Add Plate to Order",
+		"addToOrder": "Ajouter l'assiette à la commande",
 		"empty": {
-			"title": "Start Building",
-			"description": "Select ingredients to build your custom plate."
+			"title": "Commencez à composer",
+			"description": "Sélectionnez des ingrédients pour créer votre assiette personnalisée."
 		},
 		"steps": {
-			"meal": "Meal",
+			"meal": "Repas",
 			"macros": "Macros"
 		},
 		"callout": {
-			"title": "Build Your Meal",
-			"description": "Customize your nutrition exactly how you want it. Choose your base, adjust macros, and create the perfect meal for your goals.",
-			"feature1": "Custom Macros",
-			"feature2": "Real-time Pricing",
-			"feature3": "Perfect Portions",
-			"cta": "Start Building"
+			"title": "Composez Votre Repas",
+			"description": "Personnalisez votre nutrition exactement comme vous le souhaitez. Choisissez votre base, ajustez vos macros et créez le repas parfait pour vos objectifs.",
+			"feature1": "Macros Sur Mesure",
+			"feature2": "Prix en Temps Réel",
+			"feature3": "Portions Parfaites",
+			"cta": "Commencer à composer"
 		},
-		"selectMeal": "Select Your Base Meal",
-		"size": "Size",
-		"spicyLevel": "Spicy Level",
-		"noOnions": "No Onions",
-		"nutritionSummary": "Nutrition Summary",
+		"selectMeal": "Sélectionnez votre base",
+		"size": "Taille",
+		"spicyLevel": "Niveau de piment",
+		"noOnions": "Sans oignons",
+		"nutritionSummary": "Résumé Nutritionnel",
 		"total": "Total",
-		"next": "Next"
+		"next": "Suivant"
 	},
 	"ingredients": {
 		"rice": {
-			"name": "Brown Rice",
-			"description": "Steamed brown rice container"
+			"name": "Riz Complet",
+			"description": "Conteneur de riz complet à la vapeur"
 		},
 		"chickenBreast": {
-			"name": "Chicken Breast",
-			"description": "Grilled lean chicken breast"
+			"name": "Blanc de Poulet",
+			"description": "Blanc de poulet grillé maigre"
 		},
 		"crevette": {
 			"name": "Crevette",
-			"description": "Fresh grilled shrimp"
+			"description": "Crevettes fraîches grillées"
 		},
 		"salad": {
-			"name": "Mixed Salad",
-			"description": "Fresh mixed greens"
+			"name": "Salade Mixte",
+			"description": "Mélange de feuilles fraîches"
 		},
 		"harissaLight": {
 			"name": "Harissa Light",
-			"description": "Mild spicy harissa sauce"
+			"description": "Sauce harissa légèrement pimentée"
 		},
 		"oliveOil": {
-			"name": "Olive Oil",
-			"description": "Extra virgin olive oil"
+			"name": "Huile d'Olive",
+			"description": "Huile d'olive extra vierge"
 		}
 	},
 	"checkout": {
-		"title": "Checkout",
+		"title": "Commande",
 		"name": {
-			"label": "Full Name",
-			"placeholder": "Enter your full name",
-			"description": "We'll use this to contact you"
+			"label": "Nom complet",
+			"placeholder": "Entrez votre nom complet",
+			"description": "Nous l'utiliserons pour vous contacter"
 		},
 		"phone": {
-			"label": "Phone Number",
+			"label": "Numéro de téléphone",
 			"placeholder": "+216 XX XXX XXX",
-			"description": "For order confirmation"
+			"description": "Pour la confirmation de commande"
 		},
 		"location": {
-			"label": "Location",
-			"placeholder": "Enter your location or pickup address",
-			"description": "Gym pickup location or delivery address"
+			"label": "Localisation",
+			"placeholder": "Entrez votre adresse ou point de retrait",
+			"description": "Point de retrait en salle ou adresse de livraison"
 		},
-		"submit": "Place Order",
-		"submitting": "Submitting...",
-		"success": "Order submitted! We'll contact you soon.",
-		"error": "Failed to submit order. Please try again."
+		"submit": "Passer la commande",
+		"submitting": "Envoi en cours...",
+		"success": "Commande envoyée ! Nous vous contacterons bientôt.",
+		"error": "Échec de l'envoi de la commande. Veuillez réessayer."
+	},
+	"pickup": {
+		"title": "Points de Retrait",
+		"subtitle": "Disponible dans {count} salles partenaires.",
+		"openMap": "Voir sur la carte"
+	},
+	"footer": {
+		"foundedIn": "Fondée à Moknine, Monastir, 2025.",
+		"allRightsReserved": "Tous droits réservés."
 	}
 }

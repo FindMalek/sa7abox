@@ -2,6 +2,8 @@ import { randomInt } from "node:crypto";
 import { NextResponse } from "next/server";
 import { INGREDIENTS } from "@/data/ingredients";
 import { db } from "@/lib/db";
+import { getClientIP } from "@/lib/get-ip";
+import { orderRatelimit } from "@/lib/ratelimit";
 import { sendOrderNotification } from "@/lib/telegram";
 import type { CartItem } from "@/types/cart";
 
@@ -94,8 +96,51 @@ function calculateItemPrice(item: CartItem): number {
 
 export async function POST(request: Request) {
 	try {
+		// Rate limiting: Use both IP and phone number as identifiers
+		const ip = await getClientIP();
 		const body: OrderRequest = await request.json();
+		
+		// Rate limit by IP address
+		const ipLimit = await orderRatelimit.limit(`ip:${ip}`);
+		if (!ipLimit.success) {
+			return NextResponse.json(
+				{
+					error: "Too many requests. Please wait a few minutes before placing another order.",
+				},
+				{
+					status: 429,
+					headers: {
+						"Retry-After": String(ipLimit.reset - Date.now()),
+						"X-RateLimit-Limit": "5",
+						"X-RateLimit-Remaining": String(ipLimit.remaining),
+						"X-RateLimit-Reset": String(ipLimit.reset),
+					},
+				},
+			);
+		}
 
+		// Rate limit by phone number (prevents same customer spamming)
+		if (body.customerPhone) {
+			const phoneLimit = await orderRatelimit.limit(`phone:${body.customerPhone}`);
+			if (!phoneLimit.success) {
+				return NextResponse.json(
+					{
+						error: "Too many orders from this phone number. Please wait a few minutes.",
+					},
+					{
+						status: 429,
+						headers: {
+							"Retry-After": String(phoneLimit.reset - Date.now()),
+							"X-RateLimit-Limit": "5",
+							"X-RateLimit-Remaining": String(phoneLimit.remaining),
+							"X-RateLimit-Reset": String(phoneLimit.reset),
+						},
+					},
+				);
+			}
+		}
+
+		// Validation
 		if (!body.customerName || !body.customerPhone || !body.customerLocation) {
 			return NextResponse.json(
 				{ error: "Missing required fields" },

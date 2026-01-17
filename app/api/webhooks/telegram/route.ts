@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
+import { getClientIP } from "@/lib/get-ip";
+import { webhookRatelimit } from "@/lib/ratelimit";
 import {
 	answerCallbackQuery,
 	registerChatId,
@@ -9,6 +11,15 @@ import {
 
 export async function POST(request: Request) {
 	try {
+		// Rate limit by IP
+		const ip = await getClientIP();
+		const limit = await webhookRatelimit.limit(`ip:${ip}`);
+
+		if (!limit.success) {
+			console.warn(`Rate limit exceeded for Telegram webhook from IP: ${ip}`);
+			return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+		}
+
 		const update = await request.json();
 
 		// Handle callback queries (button clicks)

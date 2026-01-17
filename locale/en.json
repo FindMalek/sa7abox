@@ -214,5 +214,9 @@
 		"title": "Pickup Points",
 		"subtitle": "Available at {count} partner gyms.",
 		"openMap": "Open Map"
+	},
+	"footer": {
+		"foundedIn": "Founded in Moknine, Monastir, 2025.",
+		"allRightsReserved": "All rights reserved."
 	}
 }
