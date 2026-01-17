@@ -209,5 +209,10 @@
 		"submitting": "Submitting...",
 		"success": "Order submitted! We'll contact you soon.",
 		"error": "Failed to submit order. Please try again."
+	},
+	"pickup": {
+		"title": "Pickup Points",
+		"subtitle": "Available at {count} partner gyms.",
+		"openMap": "Open Map"
 	}
 }

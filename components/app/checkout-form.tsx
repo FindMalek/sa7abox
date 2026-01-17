@@ -23,11 +23,20 @@ import type { CartTotals } from "@/types/cart";
 interface CheckoutFormProps {
 	totals: CartTotals;
 	onBack: () => void;
-	onSubmit: (data: { name: string; phone: string; location: string }) => Promise<void>;
+	onSubmit: (data: {
+		name: string;
+		phone: string;
+		location: string;
+	}) => Promise<void>;
 	isSubmitting?: boolean;
 }
 
-export function CheckoutForm({ totals, onBack, onSubmit, isSubmitting = false }: CheckoutFormProps) {
+export function CheckoutForm({
+	totals,
+	onBack,
+	onSubmit,
+	isSubmitting = false,
+}: CheckoutFormProps) {
 	const t = useTranslations();
 	const [formData, setFormData] = useState({
 		name: "",

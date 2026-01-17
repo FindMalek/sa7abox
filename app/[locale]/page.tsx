@@ -4,6 +4,7 @@ import { useState } from "react";
 import { CartBottomBar } from "@/components/app/cart-bottom-bar";
 import { CartDrawer } from "@/components/app/cart-drawer";
 import { Hero } from "@/components/app/hero";
+import { PickupPointsSection } from "@/components/app/pickup-points-section";
 import { IngredientBuilderSection } from "@/components/app/ingredient-builder-section";
 import { Menu } from "@/components/app/menu";
 import { Header } from "@/components/layout/header";
@@ -17,6 +18,7 @@ export default function Page() {
 			<Hero />
 			<Menu />
 			<IngredientBuilderSection />
+			<PickupPointsSection />
 			<CartDrawer open={cartOpen} onOpenChange={setCartOpen} />
 			<CartBottomBar onOpenCart={() => setCartOpen(true)} />
 		</main>

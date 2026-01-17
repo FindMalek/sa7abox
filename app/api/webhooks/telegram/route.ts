@@ -13,7 +13,11 @@ export async function POST(request: Request) {
 
 		// Handle callback queries (button clicks)
 		if (update.callback_query) {
-			const { data, id: callbackQueryId, message: callbackMessage } = update.callback_query;
+			const {
+				data,
+				id: callbackQueryId,
+				message: callbackMessage,
+			} = update.callback_query;
 
 			if (data?.startsWith("ship_")) {
 				const orderNumber = data.replace("ship_", "");
@@ -110,10 +114,7 @@ export async function POST(request: Request) {
 						true, // show_alert = true to show in alert popup
 					);
 				} else {
-					await answerCallbackQuery(
-						callbackQueryId,
-						"Order not found",
-					);
+					await answerCallbackQuery(callbackQueryId, "Order not found");
 				}
 			}
 
