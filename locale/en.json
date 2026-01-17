@@ -55,31 +55,21 @@
 				"name": "Supercut",
 				"description": "Lean chicken breast, quinoa, steamed veggies."
 			},
-			"superman": {
-				"name": "Superman",
-				"description": "Grilled steak, sweet potato mash, green beans."
+			 "superbalance": {
+        		"name": "SUPERBALANCE",
+        		"description": "Balanced meal to maintain your weight - 903 kcal, 81g protein"
+      		},
+      		"superbulk": {
+  				"name": "Superbulk",
+  				"description": "High-calorie meal for optimal mass gain - 1187 kcal, 82g protein"
 			},
 			"carthageCaesar": {
-				"name": "Carthage Caesar",
-				"description": "Fresh romaine, grilled chicken, chickpeas, caesar dressing."
-			},
-			"tunisianTuna": {
-				"name": "Tunisian Tuna",
-				"description": "Tuna, olives, tomatoes, cucumbers, healthy olive oil."
-			},
-			"oatCookies": {
-				"name": "Protein Oat Cookies",
-				"description": "Healthy oats with whey protein and dark chocolate."
-			},
-			"riceBowl": {
-				"name": "Rice Bowl",
-				"description": "Steamed rice with herbs and spices."
-			},
-			"proteinShake": {
-				"name": "Protein Shake",
-				"description": "Whey protein shake with your choice of flavor."
+  				"name": "Carthage Caesar",
+  				"description": "High-protein Caesar salad 295 kcal, 46g protein"
 			}
-		},
+
+
+    	},
 		"nutrition": {
 			"calories": "Cal",
 			"protein": "Protein",

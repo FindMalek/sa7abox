@@ -55,30 +55,19 @@
 				"name": "Supercut",
 				"description": "Blanc de poulet maigre, quinoa, légumes vapeur."
 			},
-			"superman": {
-				"name": "Superman",
-				"description": "Steak grillé, purée de patates douces, haricots verts."
+			"superbalance": {
+				"name": "Superbalance",
+				"description": "Repas équilibré pour maintenir votre poids - 903 kcal, 81g protéines"
 			},
 			"carthageCaesar": {
-				"name": "Carthage Caesar",
-				"description": "Laitue romaine fraîche, poulet grillé, pois chiches, sauce césar."
+				"name": "Salade César",
+				"description": "Salade césar protéinée 295 kcal,46g protéines."
 			},
-			"tunisianTuna": {
-				"name": "Thon Tunisien",
-				"description": "Thon, olives, tomates, concombres, huile d'olive saine."
-			},
-			"oatCookies": {
-				"name": "Cookies d'Avoine Protéinés",
-				"description": "Avoine saine avec whey protéine et chocolat noir."
-			},
-			"riceBowl": {
-				"name": "Bol de Riz",
-				"description": "Riz à la vapeur aux herbes et épices."
-			},
-			"proteinShake": {
-				"name": "Shake Protéiné",
-				"description": "Shake de whey protéine avec le parfum de votre choix."
+			"superbulk": {
+  				"name": "Superbulk",
+  				"description": "Repas riche pour prise de masse optimale - 1187 kcal, 82g protéines"
 			}
+
 		},
 		"nutrition": {
 			"calories": "Cal",
