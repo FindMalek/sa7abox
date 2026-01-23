@@ -1,5 +1,6 @@
 import { PickupPoint } from "@/types/pickup";
 
+
 export const PICKUP_POINTS: PickupPoint[] = [
 	{
 		id: "fitland-moknine",
