@@ -21,6 +21,12 @@ export function Menu() {
 	const salads = MENU_ITEMS.filter((item) => item.category === "salad");
 	const sides = MENU_ITEMS.filter((item) => item.category === "side");
 	const drinks = MENU_ITEMS.filter((item) => item.category === "drink");
+	const healthySweet = MENU_ITEMS.filter(
+		(item) => item.category === "healthySweet",
+	);
+	const healthyJuice = MENU_ITEMS.filter(
+		(item) => item.category === "healthyJuice",
+	);
 
 	return (
 		<>
@@ -40,9 +46,16 @@ export function Menu() {
 							onItemClick={handleItemClick}
 						/>
 					)}
+					{healthySweet.length > 0 && (
+						<MenuSection
+							titleKey="menu.categories.healthySweet"
+							items={healthySweet}
+							onItemClick={handleItemClick}
+						/>
+					)}
 					{salads.length > 0 && (
 						<MenuSection
-							titleKey="menu.categories.greenFresh"
+							titleKey="menu.categories.salad"
 							items={salads}
 							onItemClick={handleItemClick}
 						/>
@@ -58,6 +71,13 @@ export function Menu() {
 						<MenuSection
 							titleKey="menu.categories.drinks"
 							items={drinks}
+							onItemClick={handleItemClick}
+						/>
+					)}
+					{healthyJuice.length > 0 && (
+						<MenuSection
+							titleKey="menu.categories.healthyJuice"
+							items={healthyJuice}
 							onItemClick={handleItemClick}
 						/>
 					)}

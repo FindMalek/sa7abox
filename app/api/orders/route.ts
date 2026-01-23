@@ -99,13 +99,14 @@ export async function POST(request: Request) {
 		// Rate limiting: Use both IP and phone number as identifiers
 		const ip = await getClientIP();
 		const body: OrderRequest = await request.json();
-		
+
 		// Rate limit by IP address
 		const ipLimit = await orderRatelimit.limit(`ip:${ip}`);
 		if (!ipLimit.success) {
 			return NextResponse.json(
 				{
-					error: "Too many requests. Please wait a few minutes before placing another order.",
+					error:
+						"Too many requests. Please wait a few minutes before placing another order.",
 				},
 				{
 					status: 429,
@@ -121,11 +122,14 @@ export async function POST(request: Request) {
 
 		// Rate limit by phone number (prevents same customer spamming)
 		if (body.customerPhone) {
-			const phoneLimit = await orderRatelimit.limit(`phone:${body.customerPhone}`);
+			const phoneLimit = await orderRatelimit.limit(
+				`phone:${body.customerPhone}`,
+			);
 			if (!phoneLimit.success) {
 				return NextResponse.json(
 					{
-						error: "Too many orders from this phone number. Please wait a few minutes.",
+						error:
+							"Too many orders from this phone number. Please wait a few minutes.",
 					},
 					{
 						status: 429,

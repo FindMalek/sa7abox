@@ -20,7 +20,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Textarea } from "@/components/ui/textarea";
 import { useCart } from "@/hooks/use-cart";
 import { formatTnd } from "@/lib/utils";
-import type { MenuItem, SelectedOptions } from "@/types/menu";
+import type { MenuItem, SelectedOptions, MenuItemOption } from "@/types/menu";
 
 interface MealDetailDrawerProps {
 	item: MenuItem | null;
@@ -36,15 +36,44 @@ export function MealDetailDrawer({
 	const t = useTranslations();
 	const { addItem } = useCart();
 	const [quantity, setQuantity] = useState(1);
-	const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({});
+
+	// ✅ Base quantities: toutes les bases commencent à 0
+	const [baseQuantities, setBaseQuantities] = useState<{
+		[id: string]: number;
+	}>(() => {
+		const init: { [id: string]: number } = {};
+		item?.options?.base?.forEach((b) => (init[b.id] = 0));
+		return init;
+	});
+
+	const [selectedOptions, setSelectedOptions] = useState<SelectedOptions>({
+		base: [],
+		extras: [],
+		sauce: "",
+		removeIngredients: [],
+		notes: "",
+	});
 
 	if (!item) return null;
 
 	const handleAddToCart = () => {
 		addItem(item, selectedOptions, quantity);
 		onOpenChange(false);
+
+		// Réinitialisation après ajout
 		setQuantity(1);
-		setSelectedOptions({});
+		setSelectedOptions({
+			base: [],
+			extras: [],
+			sauce: "",
+			removeIngredients: [],
+			notes: "",
+		});
+		setBaseQuantities((prev) => {
+			const reset: { [id: string]: number } = {};
+			Object.keys(prev).forEach((key) => (reset[key] = 0));
+			return reset;
+		});
 	};
 
 	const handleExtraToggle = (extraId: string) => {
@@ -58,12 +87,22 @@ export function MealDetailDrawer({
 	};
 
 	const itemPrice = item.priceTnd || 0;
+
 	const extrasTotal =
 		selectedOptions.extras?.reduce((sum, id) => {
 			const extra = item.options?.extras?.find((e) => e.id === id);
 			return sum + (extra?.priceTnd || 0);
 		}, 0) || 0;
-	const totalPrice = (itemPrice + extrasTotal) * quantity;
+
+	const baseItems = item.options?.base as MenuItemOption[] | undefined;
+
+	const baseTotal =
+		Object.entries(baseQuantities).reduce((sum, [id, qty]) => {
+			const baseItem = baseItems?.find((b) => b.id === id);
+			return sum + (baseItem?.priceTnd || 0) * qty;
+		}, 0) || 0;
+
+	const totalPrice = (itemPrice + extrasTotal + baseTotal) * quantity;
 
 	return (
 		<Drawer open={open} onOpenChange={onOpenChange}>
@@ -78,7 +117,6 @@ export function MealDetailDrawer({
 						</DrawerDescription>
 					</DrawerHeader>
 
-					{/* Replaced ScrollArea with a native div + flex-1 + overflow-y-auto */}
 					<div className="flex-1 overflow-y-auto overscroll-contain px-6">
 						<div className="space-y-8 py-6">
 							{/* Image */}
@@ -92,7 +130,7 @@ export function MealDetailDrawer({
 								/>
 							</div>
 
-							{/* Nutrition Section */}
+							{/* Nutrition */}
 							<div className="rounded-2xl border border-border/40 bg-muted/30 p-5">
 								<div className="grid grid-cols-3 gap-4 text-center">
 									<div className="flex flex-col">
@@ -122,7 +160,34 @@ export function MealDetailDrawer({
 								</div>
 							</div>
 
-							{/* Customization (Extras) */}
+							{/* Base Section */}
+							{baseItems && (
+								<div className="space-y-4">
+									<h4 className="font-black text-foreground text-sm uppercase tracking-tight">
+										{t("menu.customize.base")}
+									</h4>
+									{baseItems.map((baseItem) => (
+										<div
+											key={baseItem.id}
+											className="flex items-center justify-between rounded-xl border border-border p-4"
+										>
+											<span className="font-bold">{baseItem.label}</span>
+											<QuantitySelector
+												value={baseQuantities[baseItem.id] || 0}
+												onChange={(val) =>
+													setBaseQuantities((prev) => ({
+														...prev,
+														[baseItem.id]: val,
+													}))
+												}
+												className="rounded-xl bg-muted/50 p-1"
+											/>
+										</div>
+									))}
+								</div>
+							)}
+
+							{/* Extras */}
 							{item.options?.extras && (
 								<div className="space-y-4">
 									<h4 className="font-black text-foreground text-sm uppercase tracking-tight">
@@ -130,8 +195,6 @@ export function MealDetailDrawer({
 									</h4>
 									<div className="grid gap-3">
 										{item.options.extras.map((extra) => (
-											// biome-ignore lint/a11y/noStaticElementInteractions: <explanation>
-											// biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
 											<div
 												key={extra.id}
 												onClick={() => handleExtraToggle(extra.id)}
@@ -156,7 +219,7 @@ export function MealDetailDrawer({
 								</div>
 							)}
 
-							{/* Notes (Instructions) - Already connected, but verified */}
+							{/* Notes */}
 							<div className="space-y-3 pb-8">
 								<Label
 									htmlFor="notes"
@@ -180,6 +243,7 @@ export function MealDetailDrawer({
 						</div>
 					</div>
 
+					{/* Footer */}
 					<DrawerFooter className="shrink-0 border-border border-t bg-background/95 px-6 py-6 backdrop-blur-md">
 						<div className="mb-4 flex items-center justify-between">
 							<QuantitySelector

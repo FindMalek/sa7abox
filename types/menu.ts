@@ -1,4 +1,10 @@
-export type MenuCategory = "box" | "salad" | "side" | "drink";
+export type MenuCategory =
+	| "box"
+	| "salad"
+	| "side"
+	| "drink"
+	| "healthySweet"
+	| "healthyJuice";
 
 export interface Nutrition {
 	calories: number;
@@ -15,6 +21,7 @@ export interface MenuItemOption {
 }
 
 export interface MenuItemOptions {
+	base: MenuItemOption[];
 	extras?: MenuItemOption[];
 	sauces?: string[];
 	removeIngredients?: string[];
@@ -32,6 +39,7 @@ export interface MenuItem {
 }
 
 export interface SelectedOptions {
+	base?: string[]; // ← ajouter ceci
 	extras?: string[];
 	sauce?: string;
 	removeIngredients?: string[];

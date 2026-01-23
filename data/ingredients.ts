@@ -4,130 +4,263 @@ export type IngredientCategory = "base" | "protein" | "veg" | "sauce" | "extra";
 
 export interface Ingredient {
 	id: string;
-	nameKey: string; // Translation key
-	descriptionKey: string; // Translation key
+	nameKey: string;
+	descriptionKey: string;
 	imageUrl?: string;
-	unitLabel: string; // e.g. "container", "portion", "scoop"
+	unitLabel: string;
 	unitPriceTnd: number;
 	nutritionPerUnit: Nutrition;
-	minQty: number; // Usually 0 or 1
-	maxQty: number; // e.g. 6
-	category?: IngredientCategory;
-	required: boolean; // If true, minQty must be >= 1
+	minQty: number;
+	maxQty: number;
+	category: IngredientCategory;
+	required: boolean;
 }
 
 export const INGREDIENTS: Ingredient[] = [
-	// Base (Required)
+	/* ===================== */
+	/* 🥗 BASES */
+	/* ===================== */
+
 	{
-		id: "rice",
-		nameKey: "ingredients.rice.name",
-		descriptionKey: "ingredients.rice.description",
-		imageUrl: "/placeholder.png",
+		id: "riz",
+		nameKey: "ingredients.bases.riz",
+		descriptionKey: "ingredients.nutrition.riz",
+		imageUrl: "/assets/ingredients/rice.png",
 		unitLabel: "container",
 		unitPriceTnd: 3,
 		nutritionPerUnit: {
-			calories: 180,
-			protein: 4,
-			carbs: 38,
-			fat: 2,
-			fiber: 2,
-		},
-		minQty: 1,
-		maxQty: 3,
-		category: "base",
-		required: true,
-	},
-	// Proteins
-	{
-		id: "chicken-breast",
-		nameKey: "ingredients.chickenBreast.name",
-		descriptionKey: "ingredients.chickenBreast.description",
-		imageUrl: "/placeholder.png",
-		unitLabel: "portion",
-		unitPriceTnd: 8,
-		nutritionPerUnit: {
-			calories: 165,
-			protein: 31,
-			carbs: 0,
-			fat: 3.6,
+			calories: 210,
+			protein: 5,
+			carbs: 46,
+			fat: 0,
 			fiber: 0,
 		},
 		minQty: 0,
-		maxQty: 4,
-		category: "protein",
+		maxQty: 3,
+		category: "base",
 		required: false,
 	},
+
 	{
-		id: "crevette",
-		nameKey: "ingredients.crevette.name",
-		descriptionKey: "ingredients.crevette.description",
-		imageUrl: "/placeholder.png",
+		id: "borghol",
+		nameKey: "ingredients.bases.borghol",
+		descriptionKey: "ingredients.nutrition.borghol",
+		imageUrl: "/assets/ingredients/bulgur.png",
 		unitLabel: "portion",
-		unitPriceTnd: 12,
+		unitPriceTnd: 3,
 		nutritionPerUnit: {
-			calories: 85,
-			protein: 18,
-			carbs: 0,
+			calories: 240,
+			protein: 8,
+			carbs: 44,
 			fat: 1,
 			fiber: 0,
 		},
 		minQty: 0,
-		maxQty: 4,
-		category: "protein",
+		maxQty: 3,
+		category: "base",
 		required: false,
 	},
-	// Vegetables
+
 	{
-		id: "salad",
-		nameKey: "ingredients.salad.name",
-		descriptionKey: "ingredients.salad.description",
-		imageUrl: "/placeholder.png",
+		id: "salade-lentilles",
+		nameKey: "ingredients.bases.salade-lentilles",
+		descriptionKey: "ingredients.nutrition.salade-lentilles",
+		imageUrl: "/assets/ingredients/lentils.png",
 		unitLabel: "portion",
-		unitPriceTnd: 2,
+		unitPriceTnd: 1.5,
 		nutritionPerUnit: {
-			calories: 15,
-			protein: 1,
-			carbs: 3,
+			calories: 180,
+			protein: 13,
+			carbs: 30,
 			fat: 0,
-			fiber: 2,
+			fiber: 0,
+		},
+		minQty: 0,
+		maxQty: 3,
+		category: "veg",
+		required: false,
+	},
+
+	{
+		id: "salade-laitue",
+		nameKey: "ingredients.bases.salade-laitue",
+		descriptionKey: "ingredients.nutrition.salade-laitue",
+		imageUrl: "/assets/ingredients/lettuce.png",
+		unitLabel: "portion",
+		unitPriceTnd: 1,
+		nutritionPerUnit: {
+			calories: 30,
+			protein: 2,
+			carbs: 6,
+			fat: 0,
+			fiber: 0,
 		},
 		minQty: 0,
 		maxQty: 4,
 		category: "veg",
 		required: false,
 	},
-	// Sauces/Extras
+
 	{
-		id: "harissa-light",
-		nameKey: "ingredients.harissaLight.name",
-		descriptionKey: "ingredients.harissaLight.description",
-		imageUrl: "/placeholder.png",
-		unitLabel: "scoop",
-		unitPriceTnd: 1.5,
+		id: "salade-crombe",
+		nameKey: "ingredients.bases.salade-crombe",
+		descriptionKey: "ingredients.nutrition.salade-crombe",
+		imageUrl: "/assets/ingredients/cabbage.png",
+		unitLabel: "portion",
+		unitPriceTnd: 1,
 		nutritionPerUnit: {
-			calories: 25,
-			protein: 0,
-			carbs: 3,
+			calories: 55,
+			protein: 3,
+			carbs: 11,
+			fat: 0,
+			fiber: 0,
+		},
+		minQty: 0,
+		maxQty: 4,
+		category: "veg",
+		required: false,
+	},
+
+	/* ===================== */
+	/* 🍗 PROTÉINES */
+	/* ===================== */
+
+	{
+		id: "escalope-poulet",
+		nameKey: "ingredients.proteins.escalope-poulet",
+		descriptionKey: "ingredients.nutrition.escalope-poulet",
+		imageUrl: "/assets/ingredients/chicken-breast.png",
+		unitLabel: "portion",
+		unitPriceTnd: 5.5,
+		nutritionPerUnit: {
+			calories: 175,
+			protein: 35,
+			carbs: 0,
+			fat: 3,
+			fiber: 0,
+		},
+		minQty: 0,
+		maxQty: 4,
+		category: "protein",
+		required: false,
+	},
+
+	{
+		id: "crevette",
+		nameKey: "ingredients.proteins.crevette",
+		descriptionKey: "ingredients.nutrition.crevette",
+		imageUrl: "/assets/ingredients/shrimp.png",
+		unitLabel: "portion",
+		unitPriceTnd: 8,
+		nutritionPerUnit: {
+			calories: 105,
+			protein: 24,
+			carbs: 0,
 			fat: 1,
 			fiber: 0,
 		},
 		minQty: 0,
-		maxQty: 3,
-		category: "sauce",
+		maxQty: 4,
+		category: "protein",
 		required: false,
 	},
+
 	{
-		id: "olive-oil",
-		nameKey: "ingredients.oliveOil.name",
-		descriptionKey: "ingredients.oliveOil.description",
-		imageUrl: "/placeholder.png",
-		unitLabel: "drizzle",
-		unitPriceTnd: 1,
+		id: "cuisses-poulet",
+		nameKey: "ingredients.proteins.cuisses-poulet",
+		descriptionKey: "ingredients.nutrition.cuisses-poulet",
+		imageUrl: "/assets/ingredients/chicken-thigh.png",
+		unitLabel: "portion",
+		unitPriceTnd: 5,
 		nutritionPerUnit: {
-			calories: 40,
-			protein: 0,
+			calories: 241,
+			protein: 40,
+			carbs: 11,
+			fat: 0,
+			fiber: 0,
+		},
+		minQty: 0,
+		maxQty: 4,
+		category: "protein",
+		required: false,
+	},
+
+	{
+		id: "2-oeufs",
+		nameKey: "ingredients.proteins.2-oeufs",
+		descriptionKey: "ingredients.nutrition.2-oeufs",
+		imageUrl: "/assets/ingredients/eggs.png",
+		unitLabel: "portion",
+		unitPriceTnd: 1.5,
+		nutritionPerUnit: {
+			calories: 150,
+			protein: 14,
+			carbs: 11,
+			fat: 11,
+			fiber: 0,
+		},
+		minQty: 0,
+		maxQty: 4,
+		category: "protein",
+		required: false,
+	},
+
+	{
+		id: "2-blancs-oeuf",
+		nameKey: "ingredients.proteins.2-blancs-oeuf",
+		descriptionKey: "ingredients.nutrition.2-blancs-oeuf",
+		imageUrl: "/assets/ingredients/egg-whites.png",
+		unitLabel: "portion",
+		unitPriceTnd: 1.5,
+		nutritionPerUnit: {
+			calories: 32,
+			protein: 8,
 			carbs: 0,
-			fat: 4.5,
+			fat: 0,
+			fiber: 0,
+		},
+		minQty: 0,
+		maxQty: 4,
+		category: "protein",
+		required: false,
+	},
+
+	/* ===================== */
+	/* ➕ EXTRAS & SAUCES */
+	/* ===================== */
+
+	{
+		id: "amande",
+		nameKey: "ingredients.extras.amande",
+		descriptionKey: "ingredients.nutrition.amande",
+		imageUrl: "/assets/ingredients/almonds.png",
+		unitLabel: "portion",
+		unitPriceTnd: 4,
+		nutritionPerUnit: {
+			calories: 280,
+			protein: 10,
+			carbs: 10,
+			fat: 25,
+			fiber: 0,
+		},
+		minQty: 0,
+		maxQty: 4,
+		category: "extra",
+		required: false,
+	},
+
+	{
+		id: "sauce-sa7abox",
+		nameKey: "ingredients.extras.sauce-sa7abox",
+		descriptionKey: "ingredients.nutrition.sauce-sa7abox",
+		imageUrl: "/assets/ingredients/sa7abox-sauce.png",
+		unitLabel: "scoop",
+		unitPriceTnd: 0,
+		nutritionPerUnit: {
+			calories: 60,
+			protein: 6,
+			carbs: 0,
+			fat: 4,
 			fiber: 0,
 		},
 		minQty: 0,
