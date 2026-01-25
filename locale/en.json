@@ -84,7 +84,7 @@
 				"description": "High-calorie shrimp box designed for significant mass and strength gains."
 			},
 			"mlewiHealthy": {
-				"name": "mlewi Healthy",
+				"name": "Mlewi Healthy",
 				"description": "High-calorie shrimp box designed for significant mass and strength gains."
 			},
 			"healthyTiramisu": {
@@ -108,20 +108,36 @@
 				"description": "406 kcal, 28g protein, 33g carbs, 18g fat"
 			},
 			"Smoothie": {
-				"name": "Jus d’orange frais",
-				"description": "Jus d’orange 100 % frais pressé à froid."
+				"name": "Fresh Orange Juice",
+				"description": "100% fresh cold-pressed orange juice."
 			},
 			"orangeJuice": {
-				"name": "Jus d’orange protéiné",
-				"description": "Jus d’orange naturel enrichi en protéines."
+				"name": "Protein Orange Juice",
+				"description": "Natural orange juice enriched with protein."
 			},
 			"bananaJuice": {
-				"name": "Smoothie protéiné à la banane",
-				"description": "Banane mixée avec des protéines pour une énergie saine."
+				"name": "Banana Protein Smoothie",
+				"description": "Blended banana with protein for healthy energy."
 			},
 			"Yogurt": {
-				"name": "Yaourt protéiné à la banane",
-				"description": "Yaourt crémeux à la banane enrichi en protéines."
+				"name": "Banana Protein Yogurt",
+				"description": "Creamy banana yogurt enriched with protein."
+			},
+			"orangeFreshJuice": {
+				"name": "Fresh Orange Juice",
+				"description": "100% fresh cold-pressed orange juice."
+			},
+			"orangeProteinJuice": {
+				"name": "Protein Orange Juice",
+				"description": "Natural orange juice enriched with protein."
+			},
+			"bananaProteinSmoothie": {
+				"name": "Banana Protein Smoothie",
+				"description": "Blended banana with protein for healthy energy."
+			},
+			"bananaProteinYogurt": {
+				"name": "Banana Protein Yogurt",
+				"description": "Creamy banana yogurt enriched with protein."
 			}
 		},
 		"nutrition": {

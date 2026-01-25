@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/hooks/use-cart";
 import { formatTnd } from "@/lib/utils";
+import Image from "next/image";
 
 interface HeaderProps {
 	onOpenCart: () => void;
@@ -19,7 +20,7 @@ export function Header({ onOpenCart }: HeaderProps) {
 		<header className="sticky top-0 z-50 w-full border-border/40 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 			<div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
 				<Link href="/" className="flex items-center gap-2">
-					<div className="h-8 w-8 shrink-0 rounded bg-primary" />
+					<Image src="/logo.svg" alt="Sa7a Box" width={32} height={32} />
 					<span className="font-bold text-2xl text-primary">Sa7a Box</span>
 				</Link>
 

@@ -8,7 +8,7 @@ export function Hero() {
 	const t = useTranslations("hero");
 
 	return (
-		<section className="w-full bg-secondary px-4 pt-12 pb-8 sm:px-6 sm:pt-16 lg:px-8">
+		<section className="w-full bg-primary-foreground px-4 pt-12 pb-8 sm:px-6 sm:pt-16 lg:px-8">
 			<div className="container mx-auto max-w-xl">
 				{/* Category Tag */}
 				<div className="mb-4">

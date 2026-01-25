@@ -29,14 +29,9 @@ export function Footer() {
 					{/* Social Block */}
 					<div className="flex items-center gap-6">
 						<SocialLink
-							href="https://instagram.com/saharabox"
+							href="https://www.instagram.com/sa7abox/"
 							icon={<InstagramIcon className="h-6 w-6" />}
 							label="Instagram"
-						/>
-						<SocialLink
-							href="https://facebook.com/saharabox"
-							icon={<FacebookIcon className="h-6 w-6" />}
-							label="Facebook"
 						/>
 					</div>
 				</div>

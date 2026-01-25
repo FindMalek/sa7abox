@@ -65,7 +65,7 @@ export const INGREDIENTS: Ingredient[] = [
 		id: "salade-lentilles",
 		nameKey: "ingredients.bases.salade-lentilles",
 		descriptionKey: "ingredients.nutrition.salade-lentilles",
-		imageUrl: "/assets/ingredients/lentils.png",
+		imageUrl: "/assets/ingredients/lentils.jpeg",
 		unitLabel: "portion",
 		unitPriceTnd: 1.5,
 		nutritionPerUnit: {
