@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 		address: false,
 		telephone: false,
 	},
-	metadataBase: new URL("https://sa7abox.tn"),
+	metadataBase: new URL("https://sa7abox.com"),
 	alternates: {
 		canonical: "/",
 		languages: {
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
 		type: "website",
 		locale: "en_US",
 		alternateLocale: ["fr_TN"],
-		url: "https://sa7abox.tn",
+		url: "https://sa7abox.com",
 		siteName: "Sa7a Box",
 		title: "Sa7a Box — Premium High-Protein Meals",
 		description:
@@ -120,7 +120,7 @@ const jsonLd = {
 	servesCuisine: "Healthy, Fitness, High-Protein",
 	brand: "Sa7a Box",
 	slogan: "Fuel Your Hustle",
-	url: "https://sa7abox.tn",
+	url: "https://sa7abox.com",
 	sameAs: ["https://instagram.com/sa7abox", "https://tiktok.com/@sa7abox"],
 	areaServed: "Tunisia",
 };

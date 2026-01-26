@@ -57,4 +57,12 @@ export const PICKUP_POINTS: PickupPoint[] = [
 		mapUrl: "https://maps.google.com/?q=Sky+Fit+Monastir",
 		phone: "73 000 007",
 	},
+	{
+		id: "iron-gym-ksiba.png",
+		gymName: "Iron Gym",
+		areaLabel: "Monastir",
+		logoUrl: "/assets/pickup-points/iron-gym-ksiba.png",
+		mapUrl: "https://maps.google.com/?q=Iron+Gym+Ksiba",
+		phone: "73 000 008",
+	},
 ];

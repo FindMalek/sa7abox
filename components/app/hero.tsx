@@ -1,5 +1,4 @@
 import { ClockIcon, DumbbellIcon, TruckIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
@@ -8,7 +7,7 @@ export function Hero() {
 	const t = useTranslations("hero");
 
 	return (
-		<section className="w-full bg-primary-foreground px-4 pt-12 pb-8 sm:px-6 sm:pt-16 lg:px-8">
+		<section className="w-full bg-accent px-4 pt-12 pb-8 sm:px-6 sm:pt-16 lg:px-8">
 			<div className="container mx-auto max-w-xl">
 				{/* Category Tag */}
 				<div className="mb-4">
@@ -71,17 +70,6 @@ export function Hero() {
 							{t("features.delivery")}
 						</span>
 					</div>
-				</div>
-
-				{/* Main Image */}
-				<div className="relative aspect-4/3 w-full overflow-hidden rounded-xl shadow-xl">
-					<Image
-						src="/placeholder.png"
-						alt="Sa7a Box Premium Meal"
-						fill
-						className="object-cover"
-						priority
-					/>
 				</div>
 			</div>
 		</section>
