@@ -58,14 +58,14 @@ export function Hero() {
 					{/* Fresh Daily */}
 					<div className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 shadow-sm">
 						<ClockIcon className="h-4 w-4 text-primary" />
-						<span className="font-semibold text-black text-sm">
+						<span className="font-semibold text-foreground text-sm">
 							{t("features.freshDaily")}
 						</span>
 					</div>
 
 					{/* Delivery */}
 					<div className="flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2.5 shadow-sm">
-						<TruckIcon className="h-4 w-4 text-[#e86b2c]" />
+						<TruckIcon className="h-4 w-4 text-primary" />
 						<span className="font-semibold text-foreground text-sm">
 							{t("features.delivery")}
 						</span>

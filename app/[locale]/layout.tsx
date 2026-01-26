@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { Footer } from "@/components/layout/footer";
 import { type Locale, locales } from "@/lib/i18n";
 import "@/styles/globals.css";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -127,12 +128,15 @@ const jsonLd = {
 
 export default async function LocaleLayout({ children, params }: Props) {
 	const { locale } = await params;
-
 	const validLocale = locale as Locale;
 	const messages = await getMessages({ locale: validLocale });
 
 	return (
-		<html lang={validLocale} className={inter.variable}>
+		<html
+			lang={validLocale}
+			className={inter.variable}
+			suppressHydrationWarning
+		>
 			<head>
 				<script
 					type="application/ld+json"
@@ -143,10 +147,16 @@ export default async function LocaleLayout({ children, params }: Props) {
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<NextIntlClientProvider messages={messages} locale={validLocale}>
-					{children}
-					<Footer />
-				</NextIntlClientProvider>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="dark"
+					disableTransitionOnChange={false}
+				>
+					<NextIntlClientProvider messages={messages} locale={validLocale}>
+						{children}
+						<Footer />
+					</NextIntlClientProvider>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
