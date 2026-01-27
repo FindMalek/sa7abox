@@ -27,7 +27,7 @@ export const INGREDIENTS: Ingredient[] = [
 		descriptionKey: "ingredients.nutrition.riz",
 		imageUrl: "/assets/ingredients/rice.png",
 		unitLabel: "container",
-		unitPriceTnd: 3,
+		unitPriceTnd: 2,
 		nutritionPerUnit: {
 			calories: 210,
 			protein: 5,
@@ -47,7 +47,7 @@ export const INGREDIENTS: Ingredient[] = [
 		descriptionKey: "ingredients.nutrition.borghol",
 		imageUrl: "/assets/ingredients/bulgur.png",
 		unitLabel: "portion",
-		unitPriceTnd: 3,
+		unitPriceTnd: 2,
 		nutritionPerUnit: {
 			calories: 240,
 			protein: 8,
@@ -67,7 +67,7 @@ export const INGREDIENTS: Ingredient[] = [
 		descriptionKey: "ingredients.nutrition.salade-lentilles",
 		imageUrl: "/assets/ingredients/lentils.jpeg",
 		unitLabel: "portion",
-		unitPriceTnd: 1.5,
+		unitPriceTnd: 1,
 		nutritionPerUnit: {
 			calories: 180,
 			protein: 13,
@@ -87,7 +87,7 @@ export const INGREDIENTS: Ingredient[] = [
 		descriptionKey: "ingredients.nutrition.salade-laitue",
 		imageUrl: "/assets/ingredients/lettuce.png",
 		unitLabel: "portion",
-		unitPriceTnd: 1,
+		unitPriceTnd: 0.8,
 		nutritionPerUnit: {
 			calories: 30,
 			protein: 2,
@@ -131,7 +131,7 @@ export const INGREDIENTS: Ingredient[] = [
 		descriptionKey: "ingredients.nutrition.escalope-poulet",
 		imageUrl: "/assets/ingredients/chicken-breast.png",
 		unitLabel: "portion",
-		unitPriceTnd: 5.5,
+		unitPriceTnd: 5,
 		nutritionPerUnit: {
 			calories: 175,
 			protein: 35,
@@ -171,7 +171,7 @@ export const INGREDIENTS: Ingredient[] = [
 		descriptionKey: "ingredients.nutrition.cuisses-poulet",
 		imageUrl: "/assets/ingredients/chicken-thigh.png",
 		unitLabel: "portion",
-		unitPriceTnd: 5,
+		unitPriceTnd: 4.5,
 		nutritionPerUnit: {
 			calories: 241,
 			protein: 40,
@@ -235,7 +235,7 @@ export const INGREDIENTS: Ingredient[] = [
 		descriptionKey: "ingredients.nutrition.amande",
 		imageUrl: "/assets/ingredients/almonds.png",
 		unitLabel: "portion",
-		unitPriceTnd: 4,
+		unitPriceTnd: 3,
 		nutritionPerUnit: {
 			calories: 280,
 			protein: 10,

@@ -1,111 +1,111 @@
 {
 	"metadata": {
-		"title": "Sa7a Box — Premium Protein Meals for Athletes and Entrepreneurs",
-		"description": "Premium protein meals designed for athletes and entrepreneurs. In-gym pickup and fast delivery across Tunisia. Boost your body with Sa7a Box.",
-		"ogTitle": "Sa7a Box — Premium Protein Meals",
-		"ogDescription": "Boost your daily life with premium protein meals. In-gym pickup and fast delivery across Tunisia.",
-		"twitterTitle": "Sa7a Box — Boost Your Daily Life",
-		"twitterDescription": "Premium protein meals for athletes. In-gym pickup and fast delivery across Tunisia."
+		"title": "Sa7a Box — Repas Protéinés Premium pour Athlètes et Entrepreneurs",
+		"description": "Repas protéinés premium conçus pour les athlètes et les entrepreneurs. Retrait en salle de sport et livraison rapide dans toute la Tunisie. Boostez votre corps avec Sa7a Box.",
+		"ogTitle": "Sa7a Box — Repas Protéinés Premium",
+		"ogDescription": "Boostez votre quotidien avec des repas protéinés premium. Retrait en salle de sport et livraison rapide dans toute la Tunisie.",
+		"twitterTitle": "Sa7a Box — Boostez Votre Quotidien",
+		"twitterDescription": "Repas protéinés premium pour athlètes. Retrait en salle de sport et livraison rapide dans toute la Tunisie."
 	},
 	"brand": {
 		"name": "Sa7a Box",
-		"tagline": "Boost Your Daily Life",
-		"description": "Premium protein meals designed for performance."
+		"tagline": "Boostez Votre Quotidien",
+		"description": "Repas protéinés premium conçus pour la performance."
 	},
 	"header": {
-		"order": "Order"
+		"order": "Commander"
 	},
 	"hero": {
-		"category": "PREMIUM NUTRITION",
-		"headlinePart1": "Eat Well,",
-		"headlinePart2": "Train Well.",
-		"description": "Authentic protein-rich meals to boost your daily life in Tunisia.",
-		"orderNow": "Order Now",
-		"findUs": "Find Us",
+		"category": "NUTRITION PREMIUM",
+		"headlinePart1": "5ali Sa7tek,",
+		"headlinePart2": "Dima Ra9em 1.",
+		"description": "Repas authentiques riches en protéines pour booster votre quotidien en Tunisie.",
+		"orderNow": "Commander Maintenant",
+		"findUs": "Nous Trouver",
 		"features": {
-			"gymPickup": "In-Gym Pickup",
-			"freshDaily": "Fresh Daily",
-			"delivery": "Delivery"
+			"gymPickup": "Retrait en Salle",
+			"freshDaily": "Frais Quotidien",
+			"delivery": "Livraison"
 		}
 	},
 	"menu": {
-		"title": "Our Nutritional Selection",
-		"subtitle": "Designed for performance.",
+		"title": "Notre Sélection Nutritionnelle",
+		"subtitle": "Conçue pour la performance.",
 		"categories": {
-			"powerBoxes": "Power Plat",
-			"healthySweet": "Healthy Sweet",
-			"healthyJuice": "Healthy Juice",
+			"powerBoxes": "Plat Power",
+			"healthySweet": "Sucré Healthy",
+			"healthyJuice": "Jus Healthy",
 			"box": "Box",
-			"salad": "Salad",
-			"side": "Side",
-			"drink": "Drink",
-			"sides": "Sides",
-			"drinks": "Drinks"
+			"salad": "Salade",
+			"side": "Accompagnement",
+			"drink": "Boisson",
+			"sides": "Accompagnements",
+			"drinks": "Boissons"
 		},
 		"currency": "TND",
 		"tags": {
-			"highProtein": "High Protein",
-			"bulking": "Bulking",
-			"fresh": "Fresh",
-			"traditional": "Traditional",
-			"lowCarb": "Low Carb"
+			"highProtein": "Haute Protéine",
+			"bulking": "Prise de Masse",
+			"fresh": "Frais",
+			"traditional": "Traditionnel",
+			"lowCarb": "Faible en Glucides"
 		},
 		"items": {
 			"supercut": {
 				"name": "Supercut",
-				"description": "Lean chicken breast, quinoa, steamed vegetables."
+				"description": "Blanc de poulet maigre, quinoa, légumes cuits à la vapeur."
 			},
 			"superbalance": {
 				"name": "Superbalance",
-				"description": "Balanced meal to maintain your weight - 903 kcal, 81g protein"
+				"description": "Repas équilibré pour maintenir votre poids - 903 kcal, 81g protéines"
 			},
 			"carthageCaesar": {
-				"name": "Caesar Salad",
-				"description": "Protein-rich Caesar salad 295 kcal, 46g protein."
+				"name": "Salade César",
+				"description": "Salade César riche en protéines 295 kcal, 46g protéines."
 			},
 			"superbulk": {
 				"name": "Superbulk",
-				"description": "High-calorie meal for optimal mass gain - 1187 kcal, 82g protein"
+				"description": "Repas hypercalorique pour une prise de masse optimale - 1187 kcal, 82g protéines"
 			},
 			"supercutcrevette": {
-				"name": "Super Cut Shrimp",
-				"description": "Lean shrimp box designed for fat loss and muscle definition."
+				"name": "Super Cut Crevette",
+				"description": "Box crevette maigre conçue pour la perte de graisse et la définition musculaire."
 			},
 			"healthyNuggets": {
-				"name": "Healthy Nuggets",
-				"description": "Healthy nuggets with your favorite bases for a nutritious and tasty meal."
+				"name": "Nuggets Healthy",
+				"description": "Nuggets healthy avec vos bases préférées pour un repas nutritif et savoureux."
 			},
 			"superbalancecrevette": {
-				"name": "Super Balance Shrimp",
-				"description": "Perfectly balanced shrimp meal for daily performance and energy."
+				"name": "Super Balance Crevette",
+				"description": "Repas crevette parfaitement équilibré pour la performance et l'énergie quotidiennes."
 			},
 			"superbulkcrevette": {
-				"name": "Super Bulk Shrimp",
-				"description": "High-calorie shrimp box designed for significant mass and strength gains."
+				"name": "Super Bulk Crevette",
+				"description": "Box crevette hypercalorique conçue pour une prise de masse et de force significative."
 			},
 			"mlewiHealthy": {
 				"name": "Mlewi Healthy",
-				"description": "High-calorie shrimp box designed for significant mass and strength gains."
+				"description": "Mlewi healthy pour une énergie saine et équilibrée."
 			},
 			"healthyTiramisu": {
-				"name": "Healthy Tiramisu",
-				"description": "371 kcal, 26g protein, 24g carbs, 19g fat"
+				"name": "Tiramisu Healthy",
+				"description": "371 kcal, 26g protéines, 24g glucides, 19g lipides"
 			},
 			"trompeLOeilCoco": {
-				"name": "Coconut Trompe-l'œil",
-				"description": "452 kcal, 18g protein, 22g carbs, 32g fat"
+				"name": "Trompe-l'œil Coco",
+				"description": "452 kcal, 18g protéines, 22g glucides, 32g lipides"
 			},
 			"mousseChocoCarotte": {
-				"name": "Chocolate Carrot Mousse",
-				"description": "448 kcal, 23g protein, 26g carbs, 28g fat"
+				"name": "Mousse Chocolat Carotte",
+				"description": "448 kcal, 23g protéines, 26g glucides, 28g lipides"
 			},
 			"cheesecakeHealthy": {
-				"name": "Healthy Cheesecake",
-				"description": "488 kcal, 22g protein, 37g carbs, 28g fat"
+				"name": "Cheesecake Healthy",
+				"description": "488 kcal, 22g protéines, 37g glucides, 28g lipides"
 			},
 			"pumpkinCake": {
-				"name": "Pumpkin Cake",
-				"description": "406 kcal, 28g protein, 33g carbs, 18g fat"
+				"name": "Gâteau à la Citrouille",
+				"description": "406 kcal, 28g protéines, 33g glucides, 18g lipides"
 			},
 			"orangeJuice": {
 				"name": "Jus d'orange protéiné",
@@ -141,114 +141,114 @@
 			},
 			"platcrevettepannee": {
 				"name": "Plat de Crevette Panée",
-				"description": "Plat de crvette panée avec des légumes."
+				"description": "Plat de crevette panée avec des légumes."
 			},
 			"platcrevettegrillee": {
 				"name": "Plat de Crevette Grillée",
-				"description": "Plat de crvette grillée avec des légumes."
+				"description": "Plat de crevette grillée avec des légumes."
 			}
 		},
 		"nutrition": {
 			"calories": "Cal",
-			"protein": "Protein",
-			"carbs": "Carbs",
-			"fat": "Fat",
-			"fiber": "Fiber"
+			"protein": "Protéines",
+			"carbs": "Glucides",
+			"fat": "Lipides",
+			"fiber": "Fibres"
 		},
 		"customize": {
 			"base": "Choisir une Base",
-			"extras": "Add Extras",
-			"sauce": "Choose a Sauce",
-			"notes": "Special Instructions",
-			"notesPlaceholder": "Any special requests?"
+			"extras": "Ajouter des Extras",
+			"sauce": "Choisir une Sauce",
+			"notes": "Instructions Spéciales",
+			"notesPlaceholder": "Des demandes spéciales ?"
 		},
-		"quantity": "Quantity",
+		"quantity": "Quantité",
 		"total": "Total",
-		"addToCart": "Add to Order",
+		"addToCart": "Ajouter à la Commande",
 		"cart": {
-			"title": "Your Order",
-			"description": "Review and modify your items",
-			"subtotal": "Subtotal",
-			"item": "item",
-			"items": "items",
+			"title": "Votre Commande",
+			"description": "Vérifiez et modifiez vos articles",
+			"subtotal": "Sous-total",
+			"item": "article",
+			"items": "articles",
 			"sauce": "Sauce",
 			"extras": "Extras",
-			"remove": "Remove",
-			"continueBrowsing": "Continue",
-			"checkout": "Checkout",
-			"review": "Review Order",
+			"remove": "Retirer",
+			"continueBrowsing": "Continuer",
+			"checkout": "Commander",
+			"review": "Vérifier la Commande",
 			"empty": {
-				"title": "Your cart is empty",
-				"description": "Add items from the menu to start",
-				"action": "Browse Menu"
+				"title": "Votre panier est vide",
+				"description": "Ajoutez des articles du menu pour commencer",
+				"action": "Parcourir le Menu"
 			}
 		},
 		"checkout": {
-			"comingSoon": "Payment coming soon!"
+			"comingSoon": "Le paiement arrive bientôt !"
 		}
 	},
 	"builder": {
-		"title": "Build Your Meal",
-		"subtitle": "Choose your ingredients, adjust portions, and see macros instantly.",
+		"title": "Construisez Votre Repas",
+		"subtitle": "Choisissez vos ingrédients, ajustez les portions et voyez les macros instantanément.",
 		"categories": {
 			"base": "Base",
-			"protein": "Proteins",
-			"veg": "Vegetables",
+			"protein": "Protéines",
+			"veg": "Légumes",
 			"sauce": "Sauces & Extras",
 			"extra": "Extras"
 		},
 		"summary": {
-			"title": "Your Plate",
+			"title": "Votre Plat",
 			"nutrition": "Nutrition",
 			"total": "Total"
 		},
 		"customPlate": {
-			"name": "Custom Plate",
-			"description": "Your personalized meal"
+			"name": "Plat Personnalisé",
+			"description": "Votre repas personnalisé"
 		},
-		"addToOrder": "Add Plate to Order",
+		"addToOrder": "Ajouter le Plat à la Commande",
 		"empty": {
-			"title": "Start building",
-			"description": "Select ingredients to create your custom plate."
+			"title": "Commencez à construire",
+			"description": "Sélectionnez des ingrédients pour créer votre plat personnalisé."
 		},
 		"steps": {
-			"meal": "Meal",
+			"meal": "Repas",
 			"macros": "Macros"
 		},
 		"callout": {
-			"title": "Build Your Meal",
-			"description": "Customize your nutrition exactly how you want. Choose your base, adjust macros, and create the perfect meal for your goals.",
-			"feature1": "Custom Macros",
-			"feature2": "Real-Time Pricing",
-			"feature3": "Perfect Portions",
-			"cta": "Start Building"
+			"title": "Construisez Votre Repas",
+			"description": "Personnalisez votre nutrition exactement comme vous le souhaitez. Choisissez votre base, ajustez les macros et créez le repas parfait pour vos objectifs.",
+			"feature1": "Macros Personnalisés",
+			"feature2": "Prix en Temps Réel",
+			"feature3": "Portions Parfaites",
+			"cta": "Commencer"
 		},
-		"selectMeal": "Select your base",
-		"size": "Size",
-		"spicyLevel": "Spice Level",
-		"noOnions": "No Onions",
-		"nutritionSummary": "Nutrition Summary",
+		"selectMeal": "Sélectionnez votre base",
+		"size": "Taille",
+		"spicyLevel": "Niveau d'Épicé",
+		"noOnions": "Sans Oignons",
+		"nutritionSummary": "Résumé Nutritionnel",
 		"total": "Total",
-		"next": "Next"
+		"next": "Suivant"
 	},
 	"ingredients": {
 		"bases": {
-			"riz": "Rice",
-			"borghol": "Bulgur",
-			"salade-lentilles": "Lentil Salad",
-			"salade-laitue": "Lettuce Salad",
-			"salade-crombe": "Crombe Salad"
+			"riz": "Riz",
+			"borghol": "Boulghour",
+			"salade-lentilles": "Salade de Lentilles",
+			"salade-laitue": "Salade de Laitue",
+			"salade-crombe": "Salade de Chou"
 		},
 		"proteins": {
-			"escalope-poulet": "Chicken Escalope",
-			"crevette": "Shrimp",
-			"cuisses-poulet": "Chicken Thighs",
-			"2-oeufs": "2 Eggs",
-			"2-blancs-oeuf": "2 Egg Whites"
+			"escalope-poulet": "Escalope de Poulet",
+			"crevette": "Crevette",
+			"cuisses-poulet": "Cuisses de Poulet",
+			"2-oeufs": "2 Œufs",
+			"2-blancs-oeuf": "2 Blancs d'Œuf"
 		},
 		"extras": {
-			"amande": "Almond",
-			"sauce-sa7abox": "Sa7abox Sauce"
+			"amande": "Amande",
+			"sauce-sa7abox": "Sauce Sa7abox"
 		},
 		"nutrition": {
 			"riz": "210 kcal, 5g protein, 46g carbs, 0g fat",
@@ -266,34 +266,34 @@
 		}
 	},
 	"checkout": {
-		"title": "Checkout",
+		"title": "Commande",
 		"name": {
-			"label": "Full Name",
-			"placeholder": "Enter your full name",
-			"description": "We will use it to contact you"
+			"label": "Nom Complet",
+			"placeholder": "Entrez votre nom complet",
+			"description": "Nous l'utiliserons pour vous contacter"
 		},
 		"phone": {
-			"label": "Phone Number",
+			"label": "Numéro de Téléphone",
 			"placeholder": "+216 XX XXX XXX",
-			"description": "For order confirmation"
+			"description": "Pour la confirmation de commande"
 		},
 		"location": {
-			"label": "Location",
-			"placeholder": "Enter your address or pickup point",
-			"description": "In-gym pickup or delivery address"
+			"label": "Localisation",
+			"placeholder": "Entrez votre adresse ou point de retrait",
+			"description": "Retrait en salle de sport ou adresse de livraison"
 		},
-		"submit": "Place Order",
-		"submitting": "Submitting...",
-		"success": "Order submitted! We will contact you soon.",
-		"error": "Failed to submit order. Please try again."
+		"submit": "Passer la Commande",
+		"submitting": "Envoi en cours...",
+		"success": "Commande envoyée ! Nous vous contacterons bientôt.",
+		"error": "Échec de l'envoi de la commande. Veuillez réessayer."
 	},
 	"pickup": {
-		"title": "Pickup Points",
-		"subtitle": "Available in {count} partner gyms.",
-		"openMap": "View on Map"
+		"title": "Points de Retrait",
+		"subtitle": "Disponible dans {count} salles de sport partenaires.",
+		"openMap": "Voir sur la Carte"
 	},
 	"footer": {
-		"foundedIn": "Founded in Moknine, Monastir, 2025.",
-		"allRightsReserved": "All rights reserved."
+		"foundedIn": "Fondé à Moknine, Monastir, 2025.",
+		"allRightsReserved": "Tous droits réservés."
 	}
 }

@@ -17,8 +17,8 @@
 	},
 	"hero": {
 		"category": "PREMIUM NUTRITION",
-		"headlinePart1": "Eat Well,",
-		"headlinePart2": "Train Well.",
+		"headlinePart1": "5ali Sa7tek,",
+		"headlinePart2": "Dima Ra9em 1.",
 		"description": "Authentic protein-rich meals to boost your daily life in Tunisia.",
 		"orderNow": "Order Now",
 		"findUs": "Find Us",
@@ -32,7 +32,7 @@
 		"title": "Our Nutritional Selection",
 		"subtitle": "Designed for performance.",
 		"categories": {
-			"powerBoxes": "Power Plat",
+			"powerBoxes": "Power Plate",
 			"healthySweet": "Healthy Sweet",
 			"healthyJuice": "Healthy Juice",
 			"box": "Box",
@@ -85,7 +85,7 @@
 			},
 			"mlewiHealthy": {
 				"name": "Mlewi Healthy",
-				"description": "High-calorie shrimp box designed for significant mass and strength gains."
+				"description": "Healthy mlewi for balanced and healthy energy."
 			},
 			"healthyTiramisu": {
 				"name": "Healthy Tiramisu",
@@ -140,12 +140,12 @@
 				"description": "Creamy banana yogurt enriched with protein."
 			},
 			"platcrevettepannee": {
-				"name": "Shrimp Paned Plate",
-				"description": "Shrimp paned plate with vegetables."
+				"name": "Breaded Shrimp Plate",
+				"description": "Breaded shrimp plate with vegetables."
 			},
 			"platcrevettegrillee": {
-				"name": "Shrimp Grilled Plate",
-				"description": "Shrimp grilled plate with vegetables."
+				"name": "Grilled Shrimp Plate",
+				"description": "Grilled shrimp plate with vegetables."
 			}
 		},
 		"nutrition": {

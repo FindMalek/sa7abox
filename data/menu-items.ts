@@ -111,7 +111,7 @@ export const MENU_ITEMS: MenuItem[] = [
 			fat: 9,
 			fiber: 6,
 		},
-	},	
+	},
 
 	/* ===================== */
 	/* 🍊 HEALTHY JUICE */
