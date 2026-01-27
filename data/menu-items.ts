@@ -85,8 +85,8 @@ export const MENU_ITEMS: MenuItem[] = [
 	{
 		id: "platcrevettepannee",
 		category: "box",
-		nameKey: "menu.items.platCrevettePanne.name",
-		descriptionKey: "menu.items.platCrevettePanne.description",
+		nameKey: "menu.items.platcrevettepannee.name",
+		descriptionKey: "menu.items.platcrevettepannee.description",
 		imageUrl: "/assets/menus/plat-crevette-panne.png",
 		priceTnd: 18,
 		nutrition: {
@@ -100,8 +100,8 @@ export const MENU_ITEMS: MenuItem[] = [
 	{
 		id: "platcrevettegrillee",
 		category: "box",
-		nameKey: "menu.items.platCrevetteGrillee.name",
-		descriptionKey: "menu.items.platCrevetteGrillee.description",
+		nameKey: "menu.items.platcrevettegrillee.name",
+		descriptionKey: "menu.items.platcrevettegrillee.description",
 		imageUrl: "/assets/menus/plat-crevette-grillee.png",
 		priceTnd: 16,
 		nutrition: {

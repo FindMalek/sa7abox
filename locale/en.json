@@ -138,6 +138,14 @@
 			"bananaProteinYogurt": {
 				"name": "Banana Protein Yogurt",
 				"description": "Creamy banana yogurt enriched with protein."
+			},
+			"platcrevettepannee": {
+				"name": "Shrimp Paned Plate",
+				"description": "Shrimp paned plate with vegetables."
+			},
+			"platcrevettegrillee": {
+				"name": "Shrimp Grilled Plate",
+				"description": "Shrimp grilled plate with vegetables."
 			}
 		},
 		"nutrition": {

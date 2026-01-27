@@ -138,6 +138,14 @@
 			"bananaProteinYogurt": {
 				"name": "Yaourt protéiné à la banane",
 				"description": "Yaourt crémeux à la banane enrichi en protéines."
+			},
+			"platcrevettepannee": {
+				"name": "Plat de Crevette Panée",
+				"description": "Plat de crvette panée avec des légumes."
+			},
+			"platcrevettegrillee": {
+				"name": "Plat de Crevette Grillée",
+				"description": "Plat de crvette grillée avec des légumes."
 			}
 		},
 		"nutrition": {
