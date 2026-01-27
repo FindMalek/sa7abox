@@ -60,7 +60,7 @@ export const PICKUP_POINTS: PickupPoint[] = [
 	{
 		id: "iron-gym-ksiba.png",
 		gymName: "Iron Gym",
-		areaLabel: "Monastir",
+		areaLabel: "Ksiba",
 		logoUrl: "/assets/pickup-points/iron-gym-ksiba.png",
 		mapUrl: "https://maps.google.com/?q=Iron+Gym+Ksiba",
 		phone: "73 000 008",

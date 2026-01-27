@@ -288,7 +288,7 @@
 		"error": "Échec de l'envoi de la commande. Veuillez réessayer."
 	},
 	"pickup": {
-		"title": "Points de Retrait",
+		"title": "Nos points de vente",
 		"subtitle": "Disponible dans {count} salles de sport partenaires.",
 		"openMap": "Voir sur la Carte"
 	},

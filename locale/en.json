@@ -288,7 +288,7 @@
 		"error": "Failed to submit order. Please try again."
 	},
 	"pickup": {
-		"title": "Pickup Points",
+		"title": "Our points of sale",
 		"subtitle": "Available in {count} partner gyms.",
 		"openMap": "View on Map"
 	},
