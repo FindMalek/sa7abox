@@ -148,6 +148,7 @@
 			"fiber": "Fiber"
 		},
 		"customize": {
+			"base": "Choose a Base",
 			"extras": "Add Extras",
 			"sauce": "Choose a Sauce",
 			"notes": "Special Instructions",

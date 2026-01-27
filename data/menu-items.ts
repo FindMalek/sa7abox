@@ -1,4 +1,4 @@
-import { MenuItem } from "@/types/menu";
+import type { MenuItem } from "@/types/menu";
 
 export const MENU_ITEMS: MenuItem[] = [
 	{
@@ -7,7 +7,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		nameKey: "menu.items.supercut.name",
 		descriptionKey: "menu.items.supercut.description",
 		imageUrl: "/assets/menus/supercut.png",
-		priceTnd: 20,
+		priceTnd: 10,
 		nutrition: {
 			calories: 585,
 			protein: 75,
@@ -60,18 +60,6 @@ export const MENU_ITEMS: MenuItem[] = [
 			fat: 8.5,
 			fiber: 3,
 		},
-		options: {
-			base: [
-				// <-- tableau de bases typées
-				{ id: "rice", label: "Riz Complet", priceTnd: 2 },
-				{ id: "quinoa", label: "Quinoa", priceTnd: 3 },
-			],
-			extras: [
-				{ id: "extra-chicken", label: "Extra Chicken", priceTnd: 5 },
-				{ id: "extra-cheese", label: "Extra Cheese", priceTnd: 3 },
-			],
-			sauces: ["Caesar", "Olive Oil", "Lemon"],
-		},
 	},
 
 	{
@@ -80,26 +68,13 @@ export const MENU_ITEMS: MenuItem[] = [
 		nameKey: "menu.items.healthyNuggets.name",
 		descriptionKey: "menu.items.healthyNuggets.description",
 		imageUrl: "/assets/menus/healthy-nuggets.png",
-		priceTnd: 10, // prix de la box sans base
+		priceTnd: 10,
 		nutrition: {
 			calories: 341,
 			protein: 34,
 			carbs: 3,
 			fat: 8.5,
 			fiber: 0,
-		},
-		options: {
-			base: [
-				{ id: "rice", label: "Riz Complet", priceTnd: 4 },
-				{ id: "chicken", label: "Blanc de Poulet", priceTnd: 8 },
-				{ id: "broccoli", label: "Brocoli", priceTnd: 3 },
-			],
-			extras: [
-				{ id: "extra-sauce", label: "Sauce Healthy", priceTnd: 2 },
-				{ id: "avocado", label: "Avocat", priceTnd: 3 },
-			],
-			sauces: ["BBQ", "Miel-Moutarde", "Olive Oil"],
-			removeIngredients: ["Sel", "Poivre", "Épices"],
 		},
 	},
 
