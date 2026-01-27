@@ -25,7 +25,7 @@ export function PickupPointCard({ point }: PickupPointCardProps) {
 					priority
 				/>
 				{/* Dark Gradient Overlay */}
-				<div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/90" />
+				<div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/20 to-black/40" />
 			</div>
 
 			{/* Content */}

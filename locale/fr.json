@@ -107,21 +107,21 @@
 				"name": "Pumpkin Cake",
 				"description": "406 kcal, 28g protein, 33g carbs, 18g fat"
 			},
-			"Smoothie": {
-				"name": "Jus d'orange frais",
-				"description": "Jus d'orange 100 % frais pressé à froid."
-			},
 			"orangeJuice": {
 				"name": "Jus d'orange protéiné",
 				"description": "Jus d'orange naturel enrichi en protéines."
 			},
 			"bananaJuice": {
-				"name": "Smoothie protéiné à la banane",
-				"description": "Banane mixée avec des protéines pour une énergie saine."
+				"name": "Jus de banane frais",
+				"description": "Jus de banane mixé 100 % frais pressé à froid."
 			},
-			"Yogurt": {
-				"name": "Yaourt protéiné à la banane",
-				"description": "Yaourt crémeux à la banane enrichi en protéines."
+			"yaourtArbi": {
+				"name": "Yaourt Arbi",
+				"description": "Yaourt arbi pour une énergie saine."
+			},
+			"proteinSmoothie": {
+				"name": "Smoothie protéiné",
+				"description": "Smoothie avec banane et protéines."
 			},
 			"orangeFreshJuice": {
 				"name": "Jus d'orange frais",
