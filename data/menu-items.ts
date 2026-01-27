@@ -153,7 +153,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		nameKey: "menu.items.yaourtArbi.name",
 		descriptionKey: "menu.items.yaourtArbi.description",
 		imageUrl: "/assets/menus/banana-protein-yogurt.png",
-		priceTnd: 1,
+		priceTnd: 4,
 		nutrition: {
 			calories: 130,
 			protein: 8,
