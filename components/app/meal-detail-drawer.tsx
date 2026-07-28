@@ -19,6 +19,7 @@ import { Label } from "@/components/ui/label";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Textarea } from "@/components/ui/textarea";
 import { useCart } from "@/hooks/use-cart";
+import { useOrderingClosed } from "@/hooks/use-ordering-closed";
 import { formatTnd } from "@/lib/utils";
 import type { MenuItem, SelectedOptions, MenuItemOption } from "@/types/menu";
 
@@ -35,6 +36,7 @@ export function MealDetailDrawer({
 }: MealDetailDrawerProps) {
 	const t = useTranslations();
 	const { addItem } = useCart();
+	const orderingClosed = useOrderingClosed();
 	const [quantity, setQuantity] = useState(1);
 
 	// ✅ Base quantities: toutes les bases commencent à 0
@@ -57,6 +59,7 @@ export function MealDetailDrawer({
 	if (!item) return null;
 
 	const handleAddToCart = () => {
+		if (orderingClosed) return;
 		addItem(item, selectedOptions, quantity);
 		onOpenChange(false);
 
@@ -260,10 +263,16 @@ export function MealDetailDrawer({
 								</span>
 							</div>
 						</div>
+						{orderingClosed && (
+							<p className="mb-3 text-center font-bold text-destructive text-sm">
+								{t("menu.orderingClosedSunday")}
+							</p>
+						)}
 						<Button
 							onClick={handleAddToCart}
+							disabled={orderingClosed}
 							size="lg"
-							className="h-14 w-full rounded-2xl bg-primary font-black text-lg shadow-primary/20 shadow-xl transition-transform hover:bg-primary/90 active:scale-[0.98]"
+							className="h-14 w-full rounded-2xl bg-primary font-black text-lg shadow-primary/20 shadow-xl transition-transform hover:bg-primary/90 active:scale-[0.98] disabled:opacity-50"
 						>
 							{t("menu.addToCart")}
 						</Button>

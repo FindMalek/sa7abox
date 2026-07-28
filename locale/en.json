@@ -22,6 +22,7 @@
 		"description": "Authentic protein-rich meals to boost your daily life in Tunisia.",
 		"orderNow": "Order Now",
 		"findUs": "Find Us",
+		"sundayClosed": "Closed on Sundays — orders open Monday to Saturday.",
 		"features": {
 			"gymPickup": "In-Gym Pickup",
 			"freshDaily": "Fresh Daily",
@@ -40,8 +41,16 @@
 			"side": "Side",
 			"drink": "Drink",
 			"sides": "Sides",
-			"drinks": "Drinks"
+			"drinks": "Drinks",
+			"crevette": "Shrimp Plates",
+			"alaCarte": "A La Carte"
 		},
+		"groups": {
+			"supercut": "Super Cut",
+			"superbulk": "Super Bulk",
+			"superbalance": "Super Balance"
+		},
+		"orderingClosedSunday": "Ordering is closed on Sundays. We reopen Monday.",
 		"currency": "TND",
 		"tags": {
 			"highProtein": "High Protein",
@@ -146,6 +155,42 @@
 			"platcrevettegrillee": {
 				"name": "Grilled Shrimp Plate",
 				"description": "Grilled shrimp plate with vegetables."
+			},
+			"supercutCrunchy": {
+				"name": "Super Cut — Crunchy Chicken",
+				"description": "Super Cut with crunchy chicken (6pcs) - 490 kcal, 39g protein."
+			},
+			"supercutViande": {
+				"name": "Super Cut — Ground Beef",
+				"description": "Super Cut with ground beef - 490 kcal, 44g protein."
+			},
+			"superbulkCrunchy": {
+				"name": "Super Bulk — Crunchy Chicken",
+				"description": "Super Bulk with crunchy chicken (6pcs) - 1092 kcal, 46g protein."
+			},
+			"superbulkViande": {
+				"name": "Super Bulk — Ground Beef",
+				"description": "Super Bulk with ground beef - 1092 kcal, 51g protein."
+			},
+			"superbalanceCrunchy": {
+				"name": "Super Balance — Crunchy Chicken",
+				"description": "Super Balance with crunchy chicken (6pcs) - 808 kcal, 45g protein."
+			},
+			"superbalanceViande": {
+				"name": "Super Balance — Ground Beef",
+				"description": "Super Balance with ground beef - 808 kcal, 50g protein."
+			},
+			"crevetteGrilleeDorade": {
+				"name": "Grilled Shrimp + Grilled Sea Bream",
+				"description": "Grilled shrimp plate combined with grilled sea bream."
+			},
+			"crevetteCrispyDorade": {
+				"name": "Crispy Shrimp + Grilled Sea Bream",
+				"description": "Crispy shrimp plate combined with grilled sea bream."
+			},
+			"doradeGrillee": {
+				"name": "Grilled Sea Bream",
+				"description": "Whole grilled sea bream (dorade)."
 			}
 		},
 		"nutrition": {
@@ -244,7 +289,8 @@
 			"crevette": "Shrimp",
 			"cuisses-poulet": "Chicken Thighs",
 			"2-oeufs": "2 Eggs",
-			"2-blancs-oeuf": "2 Egg Whites"
+			"2-blancs-oeuf": "2 Egg Whites",
+			"nuggets-6pc": "6 Nuggets"
 		},
 		"extras": {
 			"amande": "Almond",
@@ -262,7 +308,8 @@
 			"2-oeufs": "150 kcal, 14g protein, 11g carbs, 11g fat",
 			"2-blancs-oeuf": "32 kcal, 8g protein, 0g carbs, 0g fat",
 			"amande": "280 kcal, 10g protein, 10g carbs, 25g fat",
-			"sauce-sa7abox": "60 kcal, 6g protein, 0g carbs, 4g fat"
+			"sauce-sa7abox": "60 kcal, 6g protein, 0g carbs, 4g fat",
+			"nuggets-6pc": "255 kcal, 34g protein, 10g carbs, 8g fat"
 		}
 	},
 	"checkout": {

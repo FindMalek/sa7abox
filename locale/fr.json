@@ -22,6 +22,7 @@
 		"description": "Repas authentiques riches en protéines pour booster votre quotidien en Tunisie.",
 		"orderNow": "Commander Maintenant",
 		"findUs": "Nous Trouver",
+		"sundayClosed": "Fermé le dimanche — commandes ouvertes du lundi au samedi.",
 		"features": {
 			"gymPickup": "Retrait en Salle",
 			"freshDaily": "Frais Quotidien",
@@ -40,8 +41,16 @@
 			"side": "Accompagnement",
 			"drink": "Boisson",
 			"sides": "Accompagnements",
-			"drinks": "Boissons"
+			"drinks": "Boissons",
+			"crevette": "Plats Crevette",
+			"alaCarte": "À La Carte"
 		},
+		"groups": {
+			"supercut": "Super Cut",
+			"superbulk": "Super Bulk",
+			"superbalance": "Super Balance"
+		},
+		"orderingClosedSunday": "Les commandes sont fermées le dimanche. Réouverture lundi.",
 		"currency": "TND",
 		"tags": {
 			"highProtein": "Haute Protéine",
@@ -146,6 +155,42 @@
 			"platcrevettegrillee": {
 				"name": "Plat de Crevette Grillée",
 				"description": "Plat de crevette grillée avec des légumes."
+			},
+			"supercutCrunchy": {
+				"name": "Super Cut — Crunchy Chicken",
+				"description": "Super Cut au crunchy chicken (6pcs) - 490 kcal, 39g protéines."
+			},
+			"supercutViande": {
+				"name": "Super Cut — Viande Hachée",
+				"description": "Super Cut à la viande hachée - 490 kcal, 44g protéines."
+			},
+			"superbulkCrunchy": {
+				"name": "Super Bulk — Crunchy Chicken",
+				"description": "Super Bulk au crunchy chicken (6pcs) - 1092 kcal, 46g protéines."
+			},
+			"superbulkViande": {
+				"name": "Super Bulk — Viande Hachée",
+				"description": "Super Bulk à la viande hachée - 1092 kcal, 51g protéines."
+			},
+			"superbalanceCrunchy": {
+				"name": "Super Balance — Crunchy Chicken",
+				"description": "Super Balance au crunchy chicken (6pcs) - 808 kcal, 45g protéines."
+			},
+			"superbalanceViande": {
+				"name": "Super Balance — Viande Hachée",
+				"description": "Super Balance à la viande hachée - 808 kcal, 50g protéines."
+			},
+			"crevetteGrilleeDorade": {
+				"name": "Crevette Grillée + Dorade Grillée",
+				"description": "Plat de crevette grillée accompagné d'une dorade grillée."
+			},
+			"crevetteCrispyDorade": {
+				"name": "Crevette Crispy + Dorade Grillée",
+				"description": "Plat de crevette crispy accompagné d'une dorade grillée."
+			},
+			"doradeGrillee": {
+				"name": "Dorade Grillée",
+				"description": "Dorade entière grillée."
 			}
 		},
 		"nutrition": {
@@ -244,7 +289,8 @@
 			"crevette": "Crevette",
 			"cuisses-poulet": "Cuisses de Poulet",
 			"2-oeufs": "2 Œufs",
-			"2-blancs-oeuf": "2 Blancs d'Œuf"
+			"2-blancs-oeuf": "2 Blancs d'Œuf",
+			"nuggets-6pc": "6 Nuggets"
 		},
 		"extras": {
 			"amande": "Amande",
@@ -262,7 +308,8 @@
 			"2-oeufs": "150 kcal, 14g protein, 11g carbs, 11g fat",
 			"2-blancs-oeuf": "32 kcal, 8g protein, 0g carbs, 0g fat",
 			"amande": "280 kcal, 10g protein, 10g carbs, 25g fat",
-			"sauce-sa7abox": "60 kcal, 6g protein, 0g carbs, 4g fat"
+			"sauce-sa7abox": "60 kcal, 6g protein, 0g carbs, 4g fat",
+			"nuggets-6pc": "255 kcal, 34g protéines, 10g glucides, 8g lipides"
 		}
 	},
 	"checkout": {

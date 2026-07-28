@@ -42,26 +42,6 @@ export const INGREDIENTS: Ingredient[] = [
 	},
 
 	{
-		id: "borghol",
-		nameKey: "ingredients.bases.borghol",
-		descriptionKey: "ingredients.nutrition.borghol",
-		imageUrl: "/assets/ingredients/bulgur.png",
-		unitLabel: "portion",
-		unitPriceTnd: 2,
-		nutritionPerUnit: {
-			calories: 240,
-			protein: 8,
-			carbs: 44,
-			fat: 1,
-			fiber: 0,
-		},
-		minQty: 0,
-		maxQty: 3,
-		category: "base",
-		required: false,
-	},
-
-	{
 		id: "salade-lentilles",
 		nameKey: "ingredients.bases.salade-lentilles",
 		descriptionKey: "ingredients.nutrition.salade-lentilles",
@@ -217,6 +197,26 @@ export const INGREDIENTS: Ingredient[] = [
 			protein: 8,
 			carbs: 0,
 			fat: 0,
+			fiber: 0,
+		},
+		minQty: 0,
+		maxQty: 4,
+		category: "protein",
+		required: false,
+	},
+
+	{
+		id: "nuggets-6pc",
+		nameKey: "ingredients.proteins.nuggets-6pc",
+		descriptionKey: "ingredients.nutrition.nuggets-6pc",
+		imageUrl: "/assets/ingredients/nuggets-6pc.png",
+		unitLabel: "portion",
+		unitPriceTnd: 5,
+		nutritionPerUnit: {
+			calories: 255,
+			protein: 34,
+			carbs: 10,
+			fat: 8,
 			fiber: 0,
 		},
 		minQty: 0,

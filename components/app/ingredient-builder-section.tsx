@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/empty";
 import { INGREDIENTS } from "@/data/ingredients";
 import { useCart } from "@/hooks/use-cart";
+import { useOrderingClosed } from "@/hooks/use-ordering-closed";
 import { BuilderProvider } from "@/lib/builder-context";
 import { createCartItemFromIngredients } from "@/lib/ingredient-cart";
 import { computePlateTotals } from "@/lib/ingredient-compute";
@@ -26,6 +27,7 @@ import type { IngredientSelection } from "@/types/ingredient-builder";
 export function IngredientBuilderSection() {
 	const t = useTranslations();
 	const { addItem } = useCart();
+	const orderingClosed = useOrderingClosed();
 
 	// Initialize selections from draft or defaults
 	const [selections, setSelections] = useState<IngredientSelection[]>(() => {
@@ -69,7 +71,7 @@ export function IngredientBuilderSection() {
 
 	const computed = computePlateTotals(selections);
 	const hasSelections = selections.some((s) => s.quantity > 0);
-	const canAddToCart = hasSelections && computed.priceTnd > 0;
+	const canAddToCart = hasSelections && computed.priceTnd > 0 && !orderingClosed;
 
 	const handleAddToCart = () => {
 		if (!canAddToCart) return;
@@ -177,6 +179,11 @@ export function IngredientBuilderSection() {
 						{/* Summary Sidebar */}
 						<div className="lg:sticky lg:top-24 lg:h-fit">
 							<BuilderSummary computed={computed} />
+							{orderingClosed && (
+								<p className="mt-4 text-center font-bold text-destructive text-sm">
+									{t("menu.orderingClosedSunday")}
+								</p>
+							)}
 							<Button
 								onClick={handleAddToCart}
 								disabled={!canAddToCart}

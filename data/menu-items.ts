@@ -1,9 +1,14 @@
 import type { MenuItem } from "@/types/menu";
 
 export const MENU_ITEMS: MenuItem[] = [
+	/* ===================== */
+	/* 💪 SUPER CUT (585 kcal ref.) */
+	/* ===================== */
+
 	{
 		id: "supercut",
 		category: "box",
+		groupKey: "supercut",
 		nameKey: "menu.items.supercut.name",
 		descriptionKey: "menu.items.supercut.description",
 		imageUrl: "/assets/menus/supercut.png",
@@ -17,23 +22,46 @@ export const MENU_ITEMS: MenuItem[] = [
 		},
 	},
 	{
-		id: "superbalance",
+		id: "supercutCrunchy",
 		category: "box",
-		nameKey: "menu.items.superbalance.name",
-		descriptionKey: "menu.items.superbalance.description",
-		imageUrl: "/assets/menus/superbalance.png",
-		priceTnd: 10,
+		groupKey: "supercut",
+		nameKey: "menu.items.supercutCrunchy.name",
+		descriptionKey: "menu.items.supercutCrunchy.description",
+		imageUrl: "/assets/menus/supercut-crunchy.png",
+		priceTnd: 11,
 		nutrition: {
-			calories: 903,
-			protein: 81,
-			carbs: 91,
-			fat: 24,
-			fiber: 7,
+			calories: 490,
+			protein: 39,
+			carbs: 61,
+			fat: 10,
+			fiber: 6,
 		},
 	},
 	{
+		id: "supercutViande",
+		category: "box",
+		groupKey: "supercut",
+		nameKey: "menu.items.supercutViande.name",
+		descriptionKey: "menu.items.supercutViande.description",
+		imageUrl: "/assets/menus/supercut-viande.png",
+		priceTnd: 18,
+		nutrition: {
+			calories: 490,
+			protein: 44,
+			carbs: 51,
+			fat: 12,
+			fiber: 6,
+		},
+	},
+
+	/* ===================== */
+	/* 💪 SUPER BULK (1187 kcal ref.) */
+	/* ===================== */
+
+	{
 		id: "superbulk",
 		category: "box",
+		groupKey: "superbulk",
 		nameKey: "menu.items.superbulk.name",
 		descriptionKey: "menu.items.superbulk.description",
 		imageUrl: "/assets/menus/superbulk.png",
@@ -47,44 +75,113 @@ export const MENU_ITEMS: MenuItem[] = [
 		},
 	},
 	{
-		id: "carthageCaesar",
+		id: "superbulkCrunchy",
 		category: "box",
-		nameKey: "menu.items.carthageCaesar.name",
-		descriptionKey: "menu.items.carthageCaesar.description",
-		imageUrl: "/assets/menus/carthage-caesar.png",
-		priceTnd: 6,
+		groupKey: "superbulk",
+		nameKey: "menu.items.superbulkCrunchy.name",
+		descriptionKey: "menu.items.superbulkCrunchy.description",
+		imageUrl: "/assets/menus/superbulk-crunchy.png",
+		priceTnd: 13,
 		nutrition: {
-			calories: 295,
+			calories: 1092,
 			protein: 46,
-			carbs: 6,
-			fat: 8.5,
-			fiber: 3,
+			carbs: 148,
+			fat: 35,
+			fiber: 8,
 		},
 	},
+	{
+		id: "superbulkViande",
+		category: "box",
+		groupKey: "superbulk",
+		nameKey: "menu.items.superbulkViande.name",
+		descriptionKey: "menu.items.superbulkViande.description",
+		imageUrl: "/assets/menus/superbulk-viande.png",
+		priceTnd: 20,
+		nutrition: {
+			calories: 1092,
+			protein: 51,
+			carbs: 138,
+			fat: 37,
+			fiber: 8,
+		},
+	},
+
+	/* ===================== */
+	/* 💪 SUPER BALANCE (903 kcal ref.) */
+	/* ===================== */
 
 	{
-		id: "healthyNuggets",
+		id: "superbalance",
 		category: "box",
-		nameKey: "menu.items.healthyNuggets.name",
-		descriptionKey: "menu.items.healthyNuggets.description",
-		imageUrl: "/assets/menus/healthy-nuggets.png",
-		priceTnd: 10,
+		groupKey: "superbalance",
+		nameKey: "menu.items.superbalance.name",
+		descriptionKey: "menu.items.superbalance.description",
+		imageUrl: "/assets/menus/superbalance.png",
+		priceTnd: 11,
 		nutrition: {
-			calories: 341,
-			protein: 34,
-			carbs: 3,
-			fat: 8.5,
-			fiber: 0,
+			calories: 903,
+			protein: 81,
+			carbs: 91,
+			fat: 24,
+			fiber: 7,
+		},
+	},
+	{
+		id: "superbalanceCrunchy",
+		category: "box",
+		groupKey: "superbalance",
+		nameKey: "menu.items.superbalanceCrunchy.name",
+		descriptionKey: "menu.items.superbalanceCrunchy.description",
+		imageUrl: "/assets/menus/superbalance-crunchy.png",
+		priceTnd: 12,
+		nutrition: {
+			calories: 808,
+			protein: 45,
+			carbs: 101,
+			fat: 26,
+			fiber: 7,
+		},
+	},
+	{
+		id: "superbalanceViande",
+		category: "box",
+		groupKey: "superbalance",
+		nameKey: "menu.items.superbalanceViande.name",
+		descriptionKey: "menu.items.superbalanceViande.description",
+		imageUrl: "/assets/menus/superbalance-viande.png",
+		priceTnd: 19,
+		nutrition: {
+			calories: 808,
+			protein: 50,
+			carbs: 91,
+			fat: 28,
+			fiber: 7,
 		},
 	},
 
 	/* ===================== */
-	/* 🍤 CREVETTE BOXES */
+	/* 🍤 PLATS CREVETTE */
 	/* ===================== */
 
+	{
+		id: "platcrevettegrillee",
+		category: "crevette",
+		nameKey: "menu.items.platcrevettegrillee.name",
+		descriptionKey: "menu.items.platcrevettegrillee.description",
+		imageUrl: "/assets/menus/plat-crevette-grillee.png",
+		priceTnd: 16,
+		nutrition: {
+			calories: 573,
+			protein: 48,
+			carbs: 75,
+			fat: 9,
+			fiber: 6,
+		},
+	},
 	{
 		id: "platcrevettepannee",
-		category: "box",
+		category: "crevette",
 		nameKey: "menu.items.platcrevettepannee.name",
 		descriptionKey: "menu.items.platcrevettepannee.description",
 		imageUrl: "/assets/menus/plat-crevette-panne.png",
@@ -98,55 +195,90 @@ export const MENU_ITEMS: MenuItem[] = [
 		},
 	},
 	{
-		id: "platcrevettegrillee",
-		category: "box",
-		nameKey: "menu.items.platcrevettegrillee.name",
-		descriptionKey: "menu.items.platcrevettegrillee.description",
-		imageUrl: "/assets/menus/plat-crevette-grillee.png",
-		priceTnd: 16,
+		id: "crevetteGrilleeDorade",
+		category: "crevette",
+		nameKey: "menu.items.crevetteGrilleeDorade.name",
+		descriptionKey: "menu.items.crevetteGrilleeDorade.description",
+		imageUrl: "/assets/menus/crevette-grillee-dorade.png",
+		priceTnd: 28,
 		nutrition: {
-			calories: 573,
-			protein: 48,
-			carbs: 75,
-			fat: 9,
-			fiber: 6,
+			calories: 853,
+			protein: 93,
+			carbs: 77,
+			fat: 19,
+			fiber: 7,
+		},
+	},
+	{
+		id: "crevetteCrispyDorade",
+		category: "crevette",
+		nameKey: "menu.items.crevetteCrispyDorade.name",
+		descriptionKey: "menu.items.crevetteCrispyDorade.description",
+		imageUrl: "/assets/menus/crevette-crispy-dorade.png",
+		priceTnd: 30,
+		nutrition: {
+			calories: 853,
+			protein: 93,
+			carbs: 77,
+			fat: 19,
+			fiber: 7,
 		},
 	},
 
 	/* ===================== */
-	/* 🍊 HEALTHY JUICE */
+	/* 🍽️ A LA CARTE */
 	/* ===================== */
 
 	{
-		id: "orangeJuice",
-		category: "healthyJuice",
-		nameKey: "menu.items.orangeJuice.name",
-		descriptionKey: "menu.items.orangeFreshJuice.description",
-		imageUrl: "/assets/menus/orange-fresh-juice.png",
-		priceTnd: 4,
+		id: "carthageCaesar",
+		category: "alaCarte",
+		nameKey: "menu.items.carthageCaesar.name",
+		descriptionKey: "menu.items.carthageCaesar.description",
+		imageUrl: "/assets/menus/carthage-caesar.png",
+		priceTnd: 9,
 		nutrition: {
-			calories: 170,
-			carbs: 45,
-			protein: 3,
-			fat: 0,
-			fiber: 1,
+			calories: 295,
+			protein: 46,
+			carbs: 6,
+			fat: 8.5,
+			fiber: 3,
 		},
 	},
 	{
-		id: "bananaJuice",
-		category: "healthyJuice",
-		nameKey: "menu.items.bananaJuice.name",
-		descriptionKey: "menu.items.bananaJuice.description",
-		imageUrl: "/assets/menus/orange-protein-juice.png",
-		priceTnd: 6.5,
+		id: "healthyNuggets",
+		category: "alaCarte",
+		nameKey: "menu.items.healthyNuggets.name",
+		descriptionKey: "menu.items.healthyNuggets.description",
+		imageUrl: "/assets/menus/healthy-nuggets.png",
+		priceTnd: 10,
 		nutrition: {
-			calories: 245,
-			protein: 10,
-			carbs: 43,
-			fat: 5.5,
+			calories: 341,
+			protein: 34,
+			carbs: 3,
+			fat: 8.5,
+			fiber: 0,
+		},
+	},
+	{
+		id: "doradeGrillee",
+		category: "alaCarte",
+		nameKey: "menu.items.doradeGrillee.name",
+		descriptionKey: "menu.items.doradeGrillee.description",
+		imageUrl: "/assets/menus/dorade-grillee.png",
+		priceTnd: 15,
+		nutrition: {
+			calories: 280,
+			protein: 45,
+			carbs: 2,
+			fat: 10,
 			fiber: 1,
 		},
 	},
+
+	/* ===================== */
+	/* 🥤 HEALTHY DRINKS */
+	/* ===================== */
+
 	{
 		id: "yaourtArbi",
 		category: "healthyJuice",

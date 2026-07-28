@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/hooks/use-cart";
+import { useOrderingClosed } from "@/hooks/use-ordering-closed";
 import type { MenuItem } from "@/types/menu";
 
 interface MealCardProps {
@@ -16,9 +17,11 @@ interface MealCardProps {
 export function MealCard({ item, onOpenDetail }: MealCardProps) {
 	const t = useTranslations();
 	const { addItem } = useCart();
+	const orderingClosed = useOrderingClosed();
 
 	const handleQuickAdd = (e: React.MouseEvent) => {
 		e.stopPropagation(); // Prevent opening the drawer
+		if (orderingClosed) return;
 		addItem(item, {}, 1); // Add with default options
 	};
 
@@ -60,13 +63,15 @@ export function MealCard({ item, onOpenDetail }: MealCardProps) {
 						</span>
 					</span>
 					{/* Direct Add Button */}
-					<Button
-						size="icon"
-						onClick={handleQuickAdd}
-						className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/20 transition-all hover:scale-110 active:scale-95"
-					>
-						<PlusIcon className="h-5 w-5" strokeWidth={3} />
-					</Button>
+					{!orderingClosed && (
+						<Button
+							size="icon"
+							onClick={handleQuickAdd}
+							className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary text-white shadow-lg shadow-primary/20 transition-all hover:scale-110 active:scale-95"
+						>
+							<PlusIcon className="h-5 w-5" strokeWidth={3} />
+						</Button>
+					)}
 				</div>
 			</div>
 		</div>

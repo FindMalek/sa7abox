@@ -4,7 +4,9 @@ export type MenuCategory =
 	| "side"
 	| "drink"
 	| "healthySweet"
-	| "healthyJuice";
+	| "healthyJuice"
+	| "crevette"
+	| "alaCarte";
 
 export interface Nutrition {
 	calories: number;
@@ -30,6 +32,7 @@ export interface MenuItemOptions {
 export interface MenuItem {
 	id: string;
 	category: MenuCategory;
+	groupKey?: string;
 	nameKey: string;
 	descriptionKey: string;
 	imageUrl: string;
