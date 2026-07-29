@@ -27,7 +27,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		groupKey: "supercut",
 		nameKey: "menu.items.supercutCrunchy.name",
 		descriptionKey: "menu.items.supercutCrunchy.description",
-		imageUrl: "/assets/menus/supercut-crunchy.png",
+		imageUrl: "/assets/menus/supercut.png",
 		priceTnd: 11,
 		nutrition: {
 			calories: 490,
@@ -43,7 +43,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		groupKey: "supercut",
 		nameKey: "menu.items.supercutViande.name",
 		descriptionKey: "menu.items.supercutViande.description",
-		imageUrl: "/assets/menus/supercut-viande.png",
+		imageUrl: "/assets/menus/supercut.png",
 		priceTnd: 18,
 		nutrition: {
 			calories: 490,
@@ -80,7 +80,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		groupKey: "superbulk",
 		nameKey: "menu.items.superbulkCrunchy.name",
 		descriptionKey: "menu.items.superbulkCrunchy.description",
-		imageUrl: "/assets/menus/superbulk-crunchy.png",
+		imageUrl: "/assets/menus/superbulk.png",
 		priceTnd: 13,
 		nutrition: {
 			calories: 1092,
@@ -96,7 +96,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		groupKey: "superbulk",
 		nameKey: "menu.items.superbulkViande.name",
 		descriptionKey: "menu.items.superbulkViande.description",
-		imageUrl: "/assets/menus/superbulk-viande.png",
+		imageUrl: "/assets/menus/superbulk.png",
 		priceTnd: 20,
 		nutrition: {
 			calories: 1092,
@@ -133,7 +133,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		groupKey: "superbalance",
 		nameKey: "menu.items.superbalanceCrunchy.name",
 		descriptionKey: "menu.items.superbalanceCrunchy.description",
-		imageUrl: "/assets/menus/superbalance-crunchy.png",
+		imageUrl: "/assets/menus/superbalance.png",
 		priceTnd: 12,
 		nutrition: {
 			calories: 808,
@@ -149,7 +149,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		groupKey: "superbalance",
 		nameKey: "menu.items.superbalanceViande.name",
 		descriptionKey: "menu.items.superbalanceViande.description",
-		imageUrl: "/assets/menus/superbalance-viande.png",
+		imageUrl: "/assets/menus/superbalance.png",
 		priceTnd: 19,
 		nutrition: {
 			calories: 808,
@@ -199,7 +199,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		category: "crevette",
 		nameKey: "menu.items.crevetteGrilleeDorade.name",
 		descriptionKey: "menu.items.crevetteGrilleeDorade.description",
-		imageUrl: "/assets/menus/crevette-grillee-dorade.png",
+		imageUrl: "/assets/menus/plat-crevette-grillee.png",
 		priceTnd: 28,
 		nutrition: {
 			calories: 853,
@@ -214,7 +214,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		category: "crevette",
 		nameKey: "menu.items.crevetteCrispyDorade.name",
 		descriptionKey: "menu.items.crevetteCrispyDorade.description",
-		imageUrl: "/assets/menus/crevette-crispy-dorade.png",
+		imageUrl: "/assets/menus/plat-crevette-panne.png",
 		priceTnd: 30,
 		nutrition: {
 			calories: 853,
@@ -264,7 +264,7 @@ export const MENU_ITEMS: MenuItem[] = [
 		category: "alaCarte",
 		nameKey: "menu.items.doradeGrillee.name",
 		descriptionKey: "menu.items.doradeGrillee.description",
-		imageUrl: "/assets/menus/dorade-grillee.png",
+		imageUrl: "/assets/menus/dorade-grillee.jpg",
 		priceTnd: 15,
 		nutrition: {
 			calories: 280,
