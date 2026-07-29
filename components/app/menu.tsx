@@ -18,6 +18,8 @@ export function Menu() {
 	};
 
 	const powerBoxes = MENU_ITEMS.filter((item) => item.category === "box");
+	const crevette = MENU_ITEMS.filter((item) => item.category === "crevette");
+	const alaCarte = MENU_ITEMS.filter((item) => item.category === "alaCarte");
 	const salads = MENU_ITEMS.filter((item) => item.category === "salad");
 	const sides = MENU_ITEMS.filter((item) => item.category === "side");
 	const drinks = MENU_ITEMS.filter((item) => item.category === "drink");
@@ -27,6 +29,19 @@ export function Menu() {
 	const healthyJuice = MENU_ITEMS.filter(
 		(item) => item.category === "healthyJuice",
 	);
+
+	// One row per plate (groupKey), preserving the order each group first
+	// appears in the data file.
+	const powerBoxGroups: { groupKey: string; items: typeof powerBoxes }[] = [];
+	for (const item of powerBoxes) {
+		const key = item.groupKey ?? item.id;
+		let group = powerBoxGroups.find((g) => g.groupKey === key);
+		if (!group) {
+			group = { groupKey: key, items: [] };
+			powerBoxGroups.push(group);
+		}
+		group.items.push(item);
+	}
 
 	return (
 		<>
@@ -39,10 +54,25 @@ export function Menu() {
 						<p className="font-medium text-muted-foreground">{t("subtitle")}</p>
 					</div>
 
-					{powerBoxes.length > 0 && (
+					{powerBoxGroups.map((group) => (
 						<MenuSection
-							titleKey="menu.categories.powerBoxes"
-							items={powerBoxes}
+							key={group.groupKey}
+							titleKey={`menu.groups.${group.groupKey}`}
+							items={group.items}
+							onItemClick={handleItemClick}
+						/>
+					))}
+					{crevette.length > 0 && (
+						<MenuSection
+							titleKey="menu.categories.crevette"
+							items={crevette}
+							onItemClick={handleItemClick}
+						/>
+					)}
+					{alaCarte.length > 0 && (
+						<MenuSection
+							titleKey="menu.categories.alaCarte"
+							items={alaCarte}
 							onItemClick={handleItemClick}
 						/>
 					)}

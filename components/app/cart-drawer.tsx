@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/empty";
 import { INGREDIENTS } from "@/data/ingredients";
 import { useCart } from "@/hooks/use-cart";
+import { useOrderingClosed } from "@/hooks/use-ordering-closed";
 import { formatTnd } from "@/lib/utils";
 import type { IngredientSelection } from "@/types/ingredient-builder";
 
@@ -37,11 +38,13 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
 	const t = useTranslations();
 	const { items, totals, removeItem, updateQuantity, isEmpty, clearCart } =
 		useCart();
+	const orderingClosed = useOrderingClosed();
 	const [showCheckout, setShowCheckout] = useState(false);
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [error, setError] = useState<string | null>(null);
 
 	const handleCheckout = () => {
+		if (orderingClosed) return;
 		setShowCheckout(true);
 		setError(null);
 	};
@@ -298,9 +301,15 @@ export function CartDrawer({ open, onOpenChange }: CartDrawerProps) {
 												</span>
 											</div>
 										</div>
+										{orderingClosed && (
+											<p className="mb-3 text-center font-bold text-destructive text-sm">
+												{t("menu.orderingClosedSunday")}
+											</p>
+										)}
 										<Button
 											onClick={handleCheckout}
-											className="h-14 w-full rounded-2xl bg-primary font-black text-lg shadow-lg shadow-primary/20"
+											disabled={orderingClosed}
+											className="h-14 w-full rounded-2xl bg-primary font-black text-lg shadow-lg shadow-primary/20 disabled:opacity-50"
 										>
 											{t("menu.cart.checkout")}
 										</Button>

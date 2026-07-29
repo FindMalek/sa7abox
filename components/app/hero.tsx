@@ -1,10 +1,14 @@
+"use client";
+
 import { ClockIcon, DumbbellIcon, TruckIcon } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/button";
+import { useOrderingClosed } from "@/hooks/use-ordering-closed";
 
 export function Hero() {
 	const t = useTranslations("hero");
+	const orderingClosed = useOrderingClosed();
 
 	return (
 		<section className="w-full bg-accent px-4 pt-12 pb-8 sm:px-6 sm:pt-16 lg:px-8">
@@ -24,15 +28,24 @@ export function Hero() {
 				</h1>
 
 				{/* Description */}
-				<p className="mb-8 text-lg text-muted-foreground leading-relaxed sm:text-xl">
+				<p className="mb-4 text-lg text-muted-foreground leading-relaxed sm:text-xl">
 					{t("description")}
 				</p>
+
+				{/* Sunday closed notice */}
+				{orderingClosed && (
+					<p className="mb-4 font-bold text-destructive text-sm">
+						{t("sundayClosed")}
+					</p>
+				)}
 
 				{/* CTAs */}
 				<div className="mb-10 grid grid-cols-2 gap-4">
 					<Button
 						size="lg"
-						className="h-14 rounded-xl bg-primary font-bold text-lg text-primary-foreground hover:bg-primary/90"
+						className={`h-14 rounded-xl bg-primary font-bold text-lg text-primary-foreground hover:bg-primary/90 ${
+							orderingClosed ? "opacity-50" : ""
+						}`}
 					>
 						<Link href="#order-form">{t("orderNow")}</Link>
 					</Button>
