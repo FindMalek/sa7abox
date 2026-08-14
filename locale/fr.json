@@ -46,6 +46,7 @@
 			"alaCarte": "À La Carte"
 		},
 		"groups": {
+			"healthyTacos": "Healthy Tacos",
 			"supercut": "Super Cut",
 			"superbulk": "Super Bulk",
 			"superbalance": "Super Balance"
@@ -53,6 +54,7 @@
 		"orderingClosedSunday": "Les commandes sont fermées le dimanche. Réouverture lundi.",
 		"currency": "TND",
 		"tags": {
+			"new": "Nouveau",
 			"highProtein": "Haute Protéine",
 			"bulking": "Prise de Masse",
 			"fresh": "Frais",
@@ -60,6 +62,18 @@
 			"lowCarb": "Faible en Glucides"
 		},
 		"items": {
+			"healthyTacos": {
+				"name": "Healthy Tacos — Escalope Grillée",
+				"description": "Pâte complète, hariisa, sauce healthy, escalope grillée, mozzarilla arbi, sauce fromage, frites healthy."
+			},
+			"healthyTacosCrunchy": {
+				"name": "Healthy Tacos — Poulet Crunchy",
+				"description": "Pâte complète, hariisa, sauce healthy, poulet crunchy, mozzarilla arbi, sauce fromage, frites healthy."
+			},
+			"healthyTacosViande": {
+				"name": "Healthy Tacos — Viande Hachée",
+				"description": "Pâte complète, hariisa, sauce healthy, viande hachée, mozzarilla arbi, sauce fromage, frites healthy."
+			},
 			"supercut": {
 				"name": "Supercut",
 				"description": "Blanc de poulet maigre, quinoa, légumes cuits à la vapeur."

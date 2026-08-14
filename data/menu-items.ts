@@ -2,6 +2,62 @@ import type { MenuItem } from "@/types/menu";
 
 export const MENU_ITEMS: MenuItem[] = [
 	/* ===================== */
+	/* 🌯 HEALTHY TACOS (767 kcal ref.) */
+	/* ===================== */
+
+	{
+		id: "healthyTacos",
+		category: "box",
+		groupKey: "healthyTacos",
+		nameKey: "menu.items.healthyTacos.name",
+		descriptionKey: "menu.items.healthyTacos.description",
+		imageUrl: "/assets/menus/healthy-tacos.jpg",
+		priceTnd: 12,
+		isNew: true,
+		nutrition: {
+			calories: 767,
+			protein: 66,
+			carbs: 74,
+			fat: 23,
+			fiber: 5,
+		},
+	},
+	{
+		id: "healthyTacosCrunchy",
+		category: "box",
+		groupKey: "healthyTacos",
+		nameKey: "menu.items.healthyTacosCrunchy.name",
+		descriptionKey: "menu.items.healthyTacosCrunchy.description",
+		imageUrl: "/assets/menus/healthy-tacos.jpg",
+		priceTnd: 13,
+		isNew: true,
+		nutrition: {
+			calories: 787,
+			protein: 59,
+			carbs: 82,
+			fat: 28,
+			fiber: 5,
+		},
+	},
+	{
+		id: "healthyTacosViande",
+		category: "box",
+		groupKey: "healthyTacos",
+		nameKey: "menu.items.healthyTacosViande.name",
+		descriptionKey: "menu.items.healthyTacosViande.description",
+		imageUrl: "/assets/menus/healthy-tacos.jpg",
+		priceTnd: 17,
+		isNew: true,
+		nutrition: {
+			calories: 797,
+			protein: 61,
+			carbs: 74,
+			fat: 29,
+			fiber: 5,
+		},
+	},
+
+	/* ===================== */
 	/* 💪 SUPER CUT (585 kcal ref.) */
 	/* ===================== */
 
