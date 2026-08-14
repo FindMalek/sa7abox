@@ -46,6 +46,13 @@ export function MealCard({ item, onOpenDetail }: MealCardProps) {
 						{item.nutrition.calories} kcal • {item.nutrition.protein}g Protein
 					</Badge>
 				</div>
+				{item.isNew && (
+					<div className="absolute top-4 right-4">
+						<Badge className="rounded-full border-none bg-primary px-3 py-1.5 font-black text-[10px] text-primary-foreground shadow-sm">
+							{t("menu.tags.new")}
+						</Badge>
+					</div>
+				)}
 			</div>
 
 			<div className="flex grow flex-col px-5 py-6">

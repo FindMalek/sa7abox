@@ -46,6 +46,7 @@
 			"alaCarte": "A La Carte"
 		},
 		"groups": {
+			"healthyTacos": "Healthy Tacos",
 			"supercut": "Super Cut",
 			"superbulk": "Super Bulk",
 			"superbalance": "Super Balance"
@@ -53,6 +54,7 @@
 		"orderingClosedSunday": "Ordering is closed on Sundays. We reopen Monday.",
 		"currency": "TND",
 		"tags": {
+			"new": "New",
 			"highProtein": "High Protein",
 			"bulking": "Bulking",
 			"fresh": "Fresh",
@@ -60,6 +62,18 @@
 			"lowCarb": "Low Carb"
 		},
 		"items": {
+			"healthyTacos": {
+				"name": "Healthy Tacos — Grilled Escalope",
+				"description": "Whole wheat wrap, harissa, healthy sauce, grilled escalope, mozzarella arbi, cheese sauce, healthy fries."
+			},
+			"healthyTacosCrunchy": {
+				"name": "Healthy Tacos — Crunchy Chicken",
+				"description": "Whole wheat wrap, harissa, healthy sauce, crunchy chicken, mozzarella arbi, cheese sauce, healthy fries."
+			},
+			"healthyTacosViande": {
+				"name": "Healthy Tacos — Ground Beef",
+				"description": "Whole wheat wrap, harissa, healthy sauce, ground beef, mozzarella arbi, cheese sauce, healthy fries."
+			},
 			"supercut": {
 				"name": "Supercut",
 				"description": "Lean chicken breast, quinoa, steamed vegetables."

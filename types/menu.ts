@@ -39,6 +39,7 @@ export interface MenuItem {
 	priceTnd?: number;
 	nutrition: Nutrition;
 	options?: MenuItemOptions;
+	isNew?: boolean;
 }
 
 export interface SelectedOptions {
