@@ -43,11 +43,19 @@ export function getLocale(request: RequestWithCookiesAndHeaders): string {
 	}
 
 	// Then check Accept-Language header
-	const acceptLanguage = request.headers.get("accept-language") ?? undefined;
-	const headers = { "accept-language": acceptLanguage };
-	const languages = new Negotiator({ headers }).languages();
+	// Malformed or garbage header values (common from bots/scanners) make
+	// Negotiator/match throw (e.g. RangeError from Intl.getCanonicalLocales) —
+	// fall back to the default locale instead of crashing the request.
+	try {
+		const acceptLanguage =
+			request.headers.get("accept-language") ?? undefined;
+		const headers = { "accept-language": acceptLanguage };
+		const languages = new Negotiator({ headers }).languages();
 
-	return match(languages, locales, defaultLocale);
+		return match(languages, locales, defaultLocale);
+	} catch {
+		return defaultLocale;
+	}
 }
 
 /**
